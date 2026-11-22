@@ -1,0 +1,759 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title id="blogPageTitle">Evara Journal — Event Inspirations &amp; Stories</title>
+  <meta name="description" content="Editorial guides, luxury design trends, and behind-the-scenes insights by Evara Events." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg-primary:    #FAF8F5;
+      --bg-secondary:  #F4EFEB;
+      --bg-card:       #FFFFFF;
+      --beige:         #EADFD5;
+      --gold:          #C5A059;
+      --gold-dark:     #9E7B35;
+      --text-dark:     #241A12;
+      --text-medium:   #5C4D40;
+      --text-light:    #8E7E72;
+      --white:         #FFFFFF;
+      --shadow-subtle: 0 6px 24px rgba(36, 26, 18, 0.06);
+      --shadow-hover:  0 18px 45px rgba(36, 26, 18, 0.12);
+      --radius-pill:   50px;
+      --radius-card:   20px;
+      --transition:    0.38s cubic-bezier(0.2, 0.8, 0.2, 1);
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; font-size: 16px; }
+    body {
+      font-family: 'Jost', sans-serif;
+      background: var(--bg-primary);
+      color: var(--text-dark);
+      line-height: 1.8;
+      overflow-x: hidden;
+    }
+    img { max-width: 100%; display: block; }
+    a { text-decoration: none; color: inherit; }
+    ul { list-style: none; }
+    button { cursor: pointer; border: none; background: none; font-family: inherit; }
+    h1, h2, h3, h4 {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 600;
+      line-height: 1.2;
+      color: var(--text-dark);
+    }
+    .container { width: 90%; max-width: 1100px; margin: 0 auto; }
+
+    .btn-gold {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: .65rem;
+      padding: .95rem 2.4rem;
+      background: linear-gradient(135deg, var(--gold) 0%, var(--gold-dark) 100%);
+      color: var(--white);
+      font-family: 'Jost', sans-serif;
+      font-size: .82rem;
+      font-weight: 500;
+      letter-spacing: .15em;
+      text-transform: uppercase;
+      border-radius: var(--radius-pill);
+      transition: all var(--transition);
+      box-shadow: 0 6px 20px rgba(197, 160, 89, 0.35);
+    }
+    .btn-gold:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 28px rgba(197, 160, 89, 0.45);
+    }
+    .gold-divider {
+      width: 55px; height: 2px;
+      background: linear-gradient(90deg, var(--gold), var(--gold-dark));
+      margin: 1.4rem 0;
+    }
+    .gold-divider.cx { margin: 1.4rem auto; }
+
+    /* Navbar */
+    #navbar {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 1000;
+      padding: 1.1rem 0;
+      background: rgba(250, 248, 245, 0.95);
+      backdrop-filter: blur(16px);
+      box-shadow: 0 2px 20px var(--shadow-subtle);
+    }
+    .nav-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .nav-logo { display: flex; align-items: center; gap: .7rem; }
+    .logo-crest {
+      width: 36px; height: 36px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--gold), var(--gold-dark));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #FFF;
+      font-size: 1rem;
+    }
+    .logo-text { display: flex; flex-direction: column; }
+    .logo-evara {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.85rem;
+      font-weight: 700;
+      line-height: 1;
+    }
+    .logo-events {
+      font-family: 'Jost', sans-serif;
+      font-size: .65rem;
+      font-weight: 500;
+      letter-spacing: .28em;
+      text-transform: uppercase;
+      color: var(--gold);
+      line-height: 1;
+      margin-top: 2px;
+    }
+    .nav-back-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: .45rem;
+      font-family: 'Jost', sans-serif;
+      font-size: .78rem;
+      font-weight: 600;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: var(--gold-dark);
+      background: rgba(197, 160, 89, 0.12);
+      padding: .5rem 1.2rem;
+      border-radius: var(--radius-pill);
+      border: 1px solid rgba(197, 160, 89, 0.3);
+      transition: all var(--transition);
+    }
+    .nav-back-btn:hover {
+      background: var(--gold);
+      color: var(--white);
+      transform: translateX(-3px);
+    }
+
+    /* Article Selector Tabs */
+    .article-tabs-bar {
+      margin-top: 5.5rem;
+      padding: 1.2rem 0;
+      background: var(--bg-secondary);
+      border-bottom: 1px solid var(--beige);
+    }
+    .tabs-inner {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: .8rem;
+      flex-wrap: wrap;
+    }
+    .tab-pill {
+      font-family: 'Jost', sans-serif;
+      font-size: .78rem;
+      font-weight: 500;
+      color: var(--text-dark);
+      background: var(--white);
+      border: 1px solid var(--beige);
+      padding: .48rem 1.15rem;
+      border-radius: var(--radius-pill);
+      transition: all var(--transition);
+      cursor: pointer;
+    }
+    .tab-pill:hover,
+    .tab-pill.active {
+      background: linear-gradient(135deg, var(--gold), var(--gold-dark));
+      color: var(--white);
+      border-color: var(--gold);
+      box-shadow: 0 4px 14px rgba(197, 160, 89, 0.35);
+    }
+
+    /* Article Layout */
+    .article-container {
+      max-width: 860px;
+      margin: 3.5rem auto 6rem;
+      background: var(--white);
+      border: 1px solid var(--beige);
+      border-radius: 28px;
+      padding: 4rem 4rem 5rem;
+      box-shadow: var(--shadow-subtle);
+    }
+    .article-header {
+      text-align: center;
+      margin-bottom: 2.8rem;
+    }
+    .art-cat-pill {
+      display: inline-block;
+      font-family: 'Jost', sans-serif;
+      font-size: .72rem;
+      font-weight: 600;
+      letter-spacing: .2em;
+      text-transform: uppercase;
+      color: var(--gold-dark);
+      background: rgba(197, 160, 89, 0.12);
+      padding: .35rem 1rem;
+      border-radius: var(--radius-pill);
+      margin-bottom: 1.2rem;
+    }
+    .article-title {
+      font-size: clamp(2.4rem, 4vw, 3.6rem);
+      line-height: 1.15;
+      margin-bottom: 1rem;
+    }
+    .article-meta {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1.2rem;
+      font-family: 'Jost', sans-serif;
+      font-size: .84rem;
+      color: var(--text-light);
+    }
+    .article-cover-wrap {
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      border-radius: 20px;
+      overflow: hidden;
+      margin-bottom: 3.5rem;
+      box-shadow: 0 15px 40px rgba(36, 26, 18, 0.1);
+    }
+    .article-cover-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .article-body {
+      font-size: 1.05rem;
+      line-height: 1.9;
+      color: var(--text-medium);
+    }
+    .article-body p { margin-bottom: 1.6rem; }
+    .article-body h3 {
+      font-size: 1.7rem;
+      margin: 2.5rem 0 1rem;
+      color: var(--text-dark);
+    }
+    .article-body blockquote {
+      border-left: 3px solid var(--gold);
+      background: var(--bg-secondary);
+      padding: 1.6rem 2rem;
+      margin: 2.2rem 0;
+      border-radius: 0 16px 16px 0;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.35rem;
+      font-style: italic;
+      color: var(--text-dark);
+      line-height: 1.6;
+    }
+    .author-card {
+      margin-top: 4rem;
+      padding-top: 2.5rem;
+      border-top: 1px solid var(--beige);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+    }
+    .author-left {
+      display: flex;
+      align-items: center;
+      gap: 1.2rem;
+    }
+    .author-avatar {
+      width: 55px; height: 55px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--gold), var(--gold-dark));
+      color: #FFF;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.3rem;
+    }
+
+    /* Footer */
+    footer {
+      background: var(--text-dark);
+      color: rgba(255, 255, 255, 0.6);
+      padding: 4rem 0 2rem;
+      text-align: center;
+    }
+    footer a { color: var(--gold); }
+
+    /* Mobile Hamburger */
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 5px;
+      width: 42px;
+      height: 42px;
+      padding: 0;
+      background: rgba(197, 160, 89, 0.1);
+      border: 1px solid rgba(197, 160, 89, 0.3);
+      border-radius: 50%;
+      cursor: pointer;
+      z-index: 1200;
+      transition: all .3s ease;
+    }
+    .hamburger:hover {
+      background: rgba(197, 160, 89, 0.2);
+    }
+    .hamburger span {
+      display: block;
+      width: 20px;
+      height: 2px;
+      background: var(--text-dark);
+      border-radius: 2px;
+      transition: all .3s cubic-bezier(0.2, 0.8, 0.2, 1);
+      transform-origin: center;
+    }
+    .hamburger.open span:nth-child(1),
+    .hamburger.active span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .hamburger.open span:nth-child(2),
+    .hamburger.active span:nth-child(2) { opacity: 0; transform: scaleX(0); }
+    .hamburger.open span:nth-child(3),
+    .hamburger.active span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+    /* Mobile Overlay Backdrop */
+    .mobile-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(36, 26, 18, 0.55);
+      backdrop-filter: blur(6px);
+      -webkit-backdrop-filter: blur(6px);
+      z-index: 1250;
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
+      transition: opacity .35s ease, visibility .35s ease;
+    }
+    .mobile-overlay.open,
+    .mobile-overlay.active {
+      opacity: 1;
+      visibility: visible;
+      pointer-events: auto;
+    }
+
+    /* Mobile Drawer */
+    .mobile-menu {
+      position: fixed;
+      top: 0; right: 0;
+      width: min(340px, 86vw);
+      height: 100vh;
+      height: 100dvh;
+      background: var(--bg-primary);
+      z-index: 1300;
+      display: flex;
+      flex-direction: column;
+      padding: 1.5rem 1.6rem 2.5rem;
+      box-shadow: -10px 0 45px rgba(36, 26, 18, 0.2);
+      transform: translateX(105%);
+      transition: transform .38s cubic-bezier(0.2, 0.8, 0.2, 1);
+      overflow-y: auto;
+      -webkit-overflow-scrolling: touch;
+    }
+    .mobile-menu.open,
+    .mobile-menu.active {
+      transform: translateX(0);
+    }
+    .mobile-menu-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-bottom: 1.2rem;
+      border-bottom: 1px solid var(--beige);
+      margin-bottom: 1.2rem;
+    }
+    .mobile-close-btn {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: rgba(197, 160, 89, 0.12);
+      border: 1px solid rgba(197, 160, 89, 0.3);
+      color: var(--text-dark);
+      font-size: 1.1rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: all var(--transition);
+    }
+    .mobile-close-btn:hover {
+      background: var(--gold);
+      color: #FFF;
+      transform: rotate(90deg);
+    }
+    .mobile-nav-links {
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+    }
+    .mobile-nav-link {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: var(--text-dark);
+      display: block;
+      padding: .45rem 0;
+      transition: color var(--transition);
+      text-decoration: none;
+    }
+    .mobile-nav-link:hover { color: var(--gold); }
+    .mobile-nav-group {
+      margin: .6rem 0 .9rem;
+      padding-left: .8rem;
+      border-left: 2px solid var(--gold);
+      display: flex;
+      flex-direction: column;
+      gap: .25rem;
+    }
+    .mobile-group-title {
+      font-family: 'Jost', sans-serif;
+      font-size: .7rem;
+      font-weight: 600;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      color: var(--gold-dark);
+      margin-bottom: .35rem;
+    }
+    .mobile-nav-sublink {
+      display: block;
+      font-family: 'Jost', sans-serif;
+      font-size: .88rem;
+      color: var(--text-medium);
+      padding: .35rem 0;
+      transition: all var(--transition);
+      text-decoration: none;
+    }
+    .mobile-nav-sublink:hover { color: var(--gold-dark); transform: translateX(3px); }
+    .mobile-menu-footer {
+      margin-top: 1.5rem;
+      padding-top: 1.2rem;
+      border-top: 1px solid var(--beige);
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+    .mobile-contact-info {
+      display: flex;
+      flex-direction: column;
+      gap: .3rem;
+      font-size: .78rem;
+      color: var(--text-light);
+    }
+
+    @media (max-width: 992px) {
+      .hamburger { display: flex; }
+      .nav-back-btn { display: none; }
+    }
+    @media (max-width: 768px) {
+      .article-container { padding: 2.5rem 1.8rem; margin: 2rem auto 4rem; }
+      .article-title { font-size: 2.2rem; }
+      .author-card { flex-direction: column; align-items: flex-start; }
+      .author-card .btn-gold { width: 100%; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- MOBILE MENU OVERLAY -->
+  <div class="mobile-overlay" id="mobileOverlay"></div>
+
+  <!-- MOBILE MENU (With Hierarchical Dropdown Groups) -->
+  <nav class="mobile-menu" id="mobileMenu" aria-label="Mobile Navigation">
+    <div class="mobile-menu-header">
+      <a href="index.html#hero" class="nav-logo" style="text-decoration:none;">
+        <div class="logo-crest">✦</div>
+        <div class="logo-text">
+          <span class="logo-evara">Evara</span>
+          <span class="logo-events">Events</span>
+        </div>
+      </a>
+      <button class="mobile-close-btn" id="mobileCloseBtn" aria-label="Close menu">✕</button>
+    </div>
+
+    <div class="mobile-nav-links">
+      <a href="index.html#hero" class="mobile-nav-link">Home</a>
+
+      <!-- About & Blog Submenu -->
+      <div class="mobile-nav-group">
+        <div class="mobile-group-title">About &amp; Journal ▾</div>
+        <a href="index.html#about" class="mobile-nav-sublink">🏛️ About Evara</a>
+        <a href="blog-detail.html" class="mobile-nav-sublink">📰 Evara Journal (Blog Page)</a>
+      </div>
+
+      <!-- Services Downward List -->
+      <div class="mobile-nav-group">
+        <div class="mobile-group-title">Our Services ▾</div>
+        <a href="service-detail.html?service=wedding" class="mobile-nav-sublink">💍 Wedding Planning</a>
+        <a href="service-detail.html?service=birthday" class="mobile-nav-sublink">🎂 Birthday Celebrations</a>
+        <a href="service-detail.html?service=corporate" class="mobile-nav-sublink">🏢 Corporate Events</a>
+        <a href="service-detail.html?service=engagement" class="mobile-nav-sublink">💫 Engagement Ceremonies</a>
+        <a href="service-detail.html?service=anniversary" class="mobile-nav-sublink">🥂 Anniversary Celebrations</a>
+        <a href="service-detail.html?service=private" class="mobile-nav-sublink">✨ Private Parties</a>
+      </div>
+
+      <a href="index.html#portfolio" class="mobile-nav-link">Portfolio</a>
+      <a href="blog-detail.html" class="mobile-nav-link">Blog / Journal</a>
+      <a href="index.html#testimonials" class="mobile-nav-link">Testimonials</a>
+      <a href="service-detail.html#inquirySection" class="mobile-nav-link">Book Consultation</a>
+    </div>
+
+    <div class="mobile-menu-footer">
+      <a href="https://wa.me/919876543210" class="btn-gold" style="width:100%; justify-content:center; padding:.85rem 1.4rem;" target="_blank" rel="noopener">
+        WhatsApp Us ✦
+      </a>
+      <div class="mobile-contact-info">
+        <span>📞 +91 98765 43210</span>
+        <span>✉️ hello@evaraevents.com</span>
+      </div>
+    </div>
+  </nav>
+
+  <!-- NAVBAR -->
+  <header id="navbar">
+    <div class="container">
+      <nav class="nav-inner">
+        <a href="index.html#hero" class="nav-logo">
+          <div class="logo-crest">✦</div>
+          <div class="logo-text">
+            <span class="logo-evara">Evara</span>
+            <span class="logo-events">Events</span>
+          </div>
+        </a>
+
+        <div style="display:flex; align-items:center; gap:1.2rem;">
+          <a href="index.html#blog" class="nav-back-btn">
+            ← Back to Home / Journal
+          </a>
+          <a href="https://wa.me/919876543210" class="btn-gold" style="padding:.6rem 1.4rem; font-size:.76rem;" target="_blank" rel="noopener">
+            WhatsApp
+          </a>
+          <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ARTICLE SELECTOR TABS -->
+  <div class="article-tabs-bar">
+    <div class="container">
+      <div class="tabs-inner">
+        <button class="tab-pill active" data-post="wedding-trends">💍 Royal Wedding Decor Trends 2026</button>
+        <button class="tab-pill" data-post="birthday-planning">🎂 Milestone Birthday Guide</button>
+        <button class="tab-pill" data-post="corporate-gala">🏢 High-Impact Corporate Galas</button>
+      </div>
+    </div>
+  </div>
+
+  <main>
+    <div class="container">
+      <article class="article-container">
+        <div class="article-header">
+          <span class="art-cat-pill" id="artCat">Wedding Guides</span>
+          <h1 class="article-title" id="artTitle">Top 10 Royal Wedding Decor Trends for 2026</h1>
+          <div class="article-meta">
+            <span id="artDate">📅 May 2026</span>
+            <span>·</span>
+            <span id="artRead">⏱️ 5 min read</span>
+            <span>·</span>
+            <span>✍️ By Evara Editorial</span>
+          </div>
+        </div>
+
+        <div class="article-cover-wrap">
+          <img id="artImg" src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=1200&q=85" alt="Article Cover" />
+        </div>
+
+        <div class="article-body" id="artBody">
+          <!-- Populated dynamically -->
+        </div>
+
+        <div class="author-card">
+          <div class="author-left">
+            <div class="author-avatar">✦</div>
+            <div>
+              <strong style="display:block; font-size:1rem; color:var(--text-dark);">Curated by Evara Creative Studio</strong>
+              <span style="font-size:.8rem; color:var(--text-light);">Luxury Celebration Planners &amp; Visual Storytellers</span>
+            </div>
+          </div>
+          <a href="index.html#contact" class="btn-gold">
+            Plan Your Celebration With Us →
+          </a>
+        </div>
+      </article>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 <a href="index.html">Evara Events</a>. All rights reserved. Crafted with care &amp; elegance.</p>
+      <p style="margin-top:.5rem;"><a href="index.html#hero">Return to Home</a> &nbsp;·&nbsp; <a href="service-detail.html">Explore Services</a></p>
+    </div>
+  </footer>
+
+  <script>
+    'use strict';
+
+    const blogDatabase = {
+      'wedding-trends': {
+        cat: 'Wedding Guides',
+        date: 'May 2026',
+        read: '5 min read',
+        title: 'Top 10 Royal Wedding Decor Trends for 2026',
+        img: 'https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=1200&q=85',
+        body: `
+          <p>Wedding celebrations are becoming more personal, warm, and elegant. Instead of heavy, crowded decorations, couples now prefer open spaces, warm lighting, and fresh flowers that look timeless in photos.</p>
+          
+          <h3>1. Hanging Flower Canopies</h3>
+          <p>Instead of tall centerpieces that block conversations across dinner tables, modern venues hang flowers and fairy lights from the ceiling. This creates a dreamy starlit garden feel that guests remember for years.</p>
+
+          <h3>2. Candlelit Walkways</h3>
+          <p>Gentle candle lanterns along the wedding aisle give a romantic, warm glow for the couple's grand entrance, making wedding photos look magical.</p>
+
+          <blockquote>"The best wedding decor doesn't just look pretty — it makes everyone feel comfortable, happy, and welcomed." — Evara Design Team</blockquote>
+
+          <h3>3. Warm Beige and Champagne Color Palettes</h3>
+          <p>Soft neutral shades like cream, warm beige, soft champagne, and gentle gold are replacing loud color clashes. These classic colors look clean, elegant, and never go out of style.</p>
+
+          <h3>4. Fresh Flower Fragrance</h3>
+          <p>Using real fresh flowers like jasmine, roses, and tuberoses fills the hall with a natural sweet fragrance that greets every arriving guest.</p>
+        `
+      },
+      'birthday-planning': {
+        cat: 'Celebration Guide',
+        date: 'April 2026',
+        read: '4 min read',
+        title: 'How to Host an Unforgettable Milestone Birthday',
+        img: 'https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?auto=format&fit=crop&w=1200&q=85',
+        body: `
+          <p>Turning 30, 40, or 50 is a wonderful life milestone. Here are three simple tips from our team to make your celebration memorable and fun for everyone.</p>
+          
+          <h3>1. Create a Photo Memory Wall</h3>
+          <p>Put together a lovely display of photos showing your favorite travel memories, school days, and family moments over the years. It immediately starts fun conversations and brings warm smiles.</p>
+
+          <h3>2. Live Food and Drink Counters</h3>
+          <p>Instead of a standard dinner line, add fun live counters like a custom mocktail bar, a live grill station, or a colorful cupcake and dessert table.</p>
+
+          <blockquote>"A great birthday party is all about sharing love and laughter with the people who matter most to you." — Evara Celebration Team</blockquote>
+
+          <h3>3. Great Music for Every Mood</h3>
+          <p>Start with pleasant acoustic guitar or saxophone music while guests arrive and chat, then bring in an energetic DJ playlist for dancing after the cake is cut.</p>
+        `
+      },
+      'corporate-gala': {
+        cat: 'Corporate Insights',
+        date: 'March 2026',
+        read: '6 min read',
+        title: 'The Art of Curating High-Impact Corporate Galas',
+        img: 'https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&w=1200&q=85',
+        body: `
+          <p>A corporate event or annual gala represents your company’s brand and achievements. Running the program smoothly and keeping attendees engaged is key to success.</p>
+
+          <h3>1. Clear Sound and Bright Screens</h3>
+          <p>Crisp microphones, balanced speakers, and clear LED screens ensure every speech and presentation is heard and seen clearly without technical hiccups.</p>
+
+          <h3>2. Warm Welcome and Easy Check-In</h3>
+          <p>Helpful hostesses at the reception desk, fast badge pick-up, and clear signage make sure your guests and VIPs feel valued from the moment they arrive.</p>
+
+          <blockquote>"When your guests leave a company event feeling respected and inspired, they stay loyal to your brand for years." — Evara Event Producer</blockquote>
+
+          <h3>3. Keeping to the Schedule</h3>
+          <p>Starting on time and keeping speeches concise keeps the energy high. Adding short musical interludes between awards keeps the audience lively and happy.</p>
+        `
+      }
+    };
+
+    function renderPost(key) {
+      const data = blogDatabase[key] || blogDatabase['wedding-trends'];
+      document.getElementById('blogPageTitle').textContent = `${data.title} — Evara Journal`;
+      document.getElementById('artCat').textContent = data.cat;
+      document.getElementById('artTitle').textContent = data.title;
+      document.getElementById('artDate').textContent = '📅 ' + data.date;
+      document.getElementById('artRead').textContent = '⏱️ ' + data.read;
+      document.getElementById('artImg').src = data.img;
+      document.getElementById('artImg').alt = data.title;
+      document.getElementById('artBody').innerHTML = data.body;
+
+      document.querySelectorAll('.tab-pill').forEach(btn => {
+        btn.classList.toggle('active', btn.getAttribute('data-post') === key);
+      });
+    }
+
+    const urlParams = new URLSearchParams(window.location.search);
+    const initialPost = urlParams.get('post') || 'wedding-trends';
+    renderPost(initialPost);
+
+    document.querySelectorAll('.tab-pill').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const key = btn.getAttribute('data-post');
+        renderPost(key);
+        try {
+          window.history.pushState({ post: key }, '', `?post=${key}`);
+        } catch (err) {
+          /* Fallback gracefully for local file:// protocol */
+        }
+        window.scrollTo({ top: 120, behavior: 'smooth' });
+      });
+    });
+
+    window.addEventListener('popstate', () => {
+      const p = new URLSearchParams(window.location.search).get('post') || 'wedding-trends';
+      renderPost(p);
+    });
+
+    // Mobile Drawer Navigation
+    const hamburger      = document.getElementById('hamburger');
+    const mobileMenu     = document.getElementById('mobileMenu');
+    const mobileOverlay  = document.getElementById('mobileOverlay');
+    const mobileCloseBtn = document.getElementById('mobileCloseBtn');
+
+    function openMobileDrawer() {
+      if (hamburger) {
+        hamburger.classList.add('open', 'active');
+        hamburger.setAttribute('aria-expanded', 'true');
+      }
+      if (mobileMenu) mobileMenu.classList.add('open', 'active');
+      if (mobileOverlay) mobileOverlay.classList.add('open', 'active');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeMobileDrawer() {
+      if (hamburger) {
+        hamburger.classList.remove('open', 'active');
+        hamburger.setAttribute('aria-expanded', 'false');
+      }
+      if (mobileMenu) mobileMenu.classList.remove('open', 'active');
+      if (mobileOverlay) mobileOverlay.classList.remove('open', 'active');
+      document.body.style.overflow = '';
+    }
+
+    function toggleMobileDrawer() {
+      const isOpen = mobileMenu && (mobileMenu.classList.contains('open') || mobileMenu.classList.contains('active'));
+      if (isOpen) {
+        closeMobileDrawer();
+      } else {
+        openMobileDrawer();
+      }
+    }
+
+    if (hamburger) hamburger.addEventListener('click', toggleMobileDrawer);
+    if (mobileCloseBtn) mobileCloseBtn.addEventListener('click', closeMobileDrawer);
+    if (mobileOverlay) mobileOverlay.addEventListener('click', closeMobileDrawer);
+
+    document.querySelectorAll('.mobile-menu a').forEach(link => {
+      link.addEventListener('click', closeMobileDrawer);
+    });
+  </script>
+</body>
+</html>

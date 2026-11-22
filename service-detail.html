@@ -1,0 +1,2596 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title id="pageTitle">Service Details — Evara Events</title>
+  <meta name="description"
+    content="Explore event planning packages, process, and past work at Evara Events. Free customized quotes available." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Jost:wght@300;400;500;600&display=swap"
+    rel="stylesheet" />
+  <style>
+    /* ============================================================
+       COLOR PALETTE & DESIGN SYSTEM (Curvy & Warm Beige)
+    ============================================================ */
+    :root {
+      --bg-primary: #FAF8F5;
+      --bg-secondary: #F4EFEB;
+      --bg-card: #FFFFFF;
+      --beige: #EADFD5;
+      --gold: #C5A059;
+      --gold-dark: #9E7B35;
+      --gold-light: #EBD9B8;
+      --text-dark: #241A12;
+      --text-medium: #5C4D40;
+      --text-light: #8E7E72;
+      --white: #FFFFFF;
+      --shadow-subtle: 0 6px 24px rgba(36, 26, 18, 0.06);
+      --shadow-hover: 0 18px 45px rgba(36, 26, 18, 0.12);
+      --shadow-gold: 0 10px 30px rgba(197, 160, 89, 0.38);
+      --border-soft: rgba(197, 160, 89, 0.28);
+      --radius-pill: 50px;
+      --radius-card: 20px;
+      --radius-input: 14px;
+      --transition: 0.38s cubic-bezier(0.2, 0.8, 0.2, 1);
+    }
+
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      font-size: 16px;
+    }
+
+    body {
+      font-family: 'Jost', sans-serif;
+      background: var(--bg-primary);
+      color: var(--text-dark);
+      line-height: 1.7;
+      overflow-x: hidden;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    ul {
+      list-style: none;
+    }
+
+    button {
+      cursor: pointer;
+      border: none;
+      background: none;
+      font-family: inherit;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4 {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 600;
+      line-height: 1.15;
+      color: var(--text-dark);
+    }
+
+    p {
+      color: var(--text-medium);
+      font-weight: 300;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    /* Curvy Buttons */
+    .btn-gold {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: .65rem;
+      padding: .95rem 2.4rem;
+      background: linear-gradient(135deg, var(--gold) 0%, var(--gold-dark) 100%);
+      color: var(--white);
+      font-family: 'Jost', sans-serif;
+      font-size: .82rem;
+      font-weight: 500;
+      letter-spacing: .15em;
+      text-transform: uppercase;
+      border-radius: var(--radius-pill);
+      transition: all var(--transition);
+      box-shadow: 0 6px 20px rgba(197, 160, 89, 0.35);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .btn-gold:hover {
+      transform: translateY(-3px) scale(1.02);
+      box-shadow: var(--shadow-gold);
+    }
+
+    .btn-gold .btn-arrow {
+      display: inline-block;
+      transition: transform var(--transition);
+    }
+
+    .btn-gold:hover .btn-arrow {
+      transform: translateX(5px);
+    }
+
+    .btn-outline {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: .65rem;
+      padding: .92rem 2.4rem;
+      border: 1.5px solid var(--gold);
+      color: var(--gold-dark);
+      background: rgba(255, 255, 255, 0.4);
+      backdrop-filter: blur(8px);
+      font-family: 'Jost', sans-serif;
+      font-size: .82rem;
+      font-weight: 500;
+      letter-spacing: .15em;
+      text-transform: uppercase;
+      border-radius: var(--radius-pill);
+      transition: all var(--transition);
+    }
+
+    .btn-outline:hover {
+      background: var(--gold);
+      color: var(--white);
+      transform: translateY(-3px);
+      box-shadow: 0 10px 25px rgba(197, 160, 89, 0.3);
+    }
+
+    .btn-whatsapp {
+      display: inline-flex;
+      align-items: center;
+      gap: .6rem;
+      padding: .92rem 1.8rem;
+      background: #25D366;
+      color: var(--white);
+      border-radius: var(--radius-pill);
+      font-family: 'Jost', sans-serif;
+      font-size: .82rem;
+      font-weight: 500;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      transition: all var(--transition);
+      box-shadow: 0 6px 20px rgba(37, 211, 102, 0.35);
+    }
+
+    .btn-whatsapp:hover {
+      background: #128C7E;
+      transform: translateY(-3px);
+      box-shadow: 0 10px 28px rgba(37, 211, 102, 0.4);
+    }
+
+    /* Section Tag & Dividers */
+    .section-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: .65rem;
+      font-family: 'Jost', sans-serif;
+      font-size: .72rem;
+      font-weight: 500;
+      letter-spacing: .28em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 1rem;
+    }
+
+    .section-tag::before,
+    .section-tag::after {
+      content: '';
+      display: block;
+      width: 28px;
+      height: 1px;
+      background: var(--gold);
+      opacity: .7;
+    }
+
+    .gold-divider {
+      width: 55px;
+      height: 2px;
+      background: linear-gradient(90deg, var(--gold), var(--gold-dark));
+      margin: 1.4rem 0;
+    }
+
+    .gold-divider.cx {
+      margin: 1.4rem auto;
+    }
+
+    /* ============================================================
+       1. NAVIGATION
+    ============================================================ */
+    #navbar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+      padding: 1.1rem 0;
+      transition: all var(--transition);
+      background: rgba(250, 248, 245, 0.95);
+      backdrop-filter: blur(16px);
+      box-shadow: 0 2px 20px var(--shadow-subtle);
+    }
+
+    .nav-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .nav-logo {
+      display: flex;
+      align-items: center;
+      gap: .7rem;
+    }
+
+    .logo-crest {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--gold), var(--gold-dark));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #FFF;
+      font-size: 1rem;
+      box-shadow: 0 3px 12px rgba(197, 160, 89, 0.35);
+      flex-shrink: 0;
+    }
+
+    .logo-text {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .logo-evara {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.85rem;
+      font-weight: 700;
+      color: var(--text-dark);
+      letter-spacing: .06em;
+      line-height: 1;
+    }
+
+    .logo-events {
+      font-family: 'Jost', sans-serif;
+      font-size: .65rem;
+      font-weight: 500;
+      letter-spacing: .28em;
+      text-transform: uppercase;
+      color: var(--gold);
+      line-height: 1;
+      margin-top: 2px;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 2.2rem;
+    }
+
+    .nav-links>li {
+      position: relative;
+    }
+
+    .nav-links>li>a,
+    .nav-dropdown-btn {
+      font-family: 'Jost', sans-serif;
+      font-size: .82rem;
+      font-weight: 500;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: var(--text-dark);
+      position: relative;
+      transition: color var(--transition);
+      display: inline-flex;
+      align-items: center;
+      gap: .35rem;
+      padding: .4rem 0;
+      background: none;
+      border: none;
+      cursor: pointer;
+    }
+
+    .nav-links>li>a::after,
+    .nav-dropdown-btn::after {
+      content: '';
+      position: absolute;
+      bottom: 0px;
+      left: 0;
+      width: 0;
+      height: 1.5px;
+      background: var(--gold);
+      transition: width var(--transition);
+    }
+
+    .nav-links>li>a:hover,
+    .nav-links>li>a.active,
+    .nav-dropdown-btn:hover,
+    .nav-dropdown-item.open .nav-dropdown-btn {
+      color: var(--gold-dark);
+    }
+
+    .nav-links>li>a:hover::after,
+    .nav-links>li>a.active::after,
+    .nav-dropdown-btn:hover::after,
+    .nav-dropdown-item.open .nav-dropdown-btn::after {
+      width: 100%;
+    }
+
+    .dropdown-arrow {
+      font-size: .65rem;
+      color: var(--gold);
+      transition: transform var(--transition);
+    }
+
+    .nav-dropdown-item:hover .dropdown-arrow,
+    .nav-dropdown-item.open .dropdown-arrow {
+      transform: rotate(180deg);
+    }
+
+    /* DOWNWARD DROPDOWN MENU */
+    .nav-dropdown-menu {
+      position: absolute;
+      top: calc(100% + 14px);
+      left: 50%;
+      transform: translateX(-50%) translateY(10px);
+      background: rgba(255, 255, 255, 0.98);
+      backdrop-filter: blur(20px);
+      border: 1px solid rgba(197, 160, 89, 0.35);
+      border-radius: 20px;
+      box-shadow: 0 20px 50px rgba(36, 26, 18, 0.14);
+      padding: .85rem;
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
+      transition: opacity .3s ease, transform .3s ease, visibility .3s ease;
+      z-index: 1200;
+    }
+
+    .nav-dropdown-menu::before {
+      content: '';
+      position: absolute;
+      top: -16px;
+      left: 0;
+      right: 0;
+      height: 16px;
+    }
+
+    .nav-dropdown-item:hover .nav-dropdown-menu,
+    .nav-dropdown-item.open .nav-dropdown-menu {
+      opacity: 1;
+      visibility: visible;
+      pointer-events: auto;
+      transform: translateX(-50%) translateY(0);
+    }
+
+    .services-dropdown {
+      min-width: 350px;
+    }
+
+    .about-dropdown {
+      min-width: 270px;
+    }
+
+    .dropdown-link {
+      display: flex;
+      align-items: center;
+      gap: .85rem;
+      padding: .7rem .95rem;
+      border-radius: 12px;
+      transition: all .25s ease;
+      color: var(--text-dark);
+      text-decoration: none;
+      cursor: pointer;
+    }
+
+    .dropdown-link:hover {
+      background: var(--bg-secondary);
+      transform: translateX(4px);
+    }
+
+    .dd-icon {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: rgba(197, 160, 89, 0.12);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.15rem;
+      flex-shrink: 0;
+      transition: all .25s ease;
+    }
+
+    .dropdown-link:hover .dd-icon {
+      background: linear-gradient(135deg, var(--gold), var(--gold-dark));
+      color: #FFF;
+      box-shadow: 0 4px 12px rgba(197, 160, 89, 0.35);
+    }
+
+    .dd-content {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .dd-title {
+      font-family: 'Jost', sans-serif;
+      font-size: .84rem;
+      font-weight: 500;
+      color: var(--text-dark);
+      line-height: 1.3;
+    }
+
+    .dropdown-link:hover .dd-title {
+      color: var(--gold-dark);
+    }
+
+    .dd-sub {
+      font-size: .72rem;
+      color: var(--text-light);
+      line-height: 1.3;
+      margin-top: 2px;
+    }
+
+    .dropdown-footer {
+      border-top: 1px solid var(--beige);
+      margin-top: .5rem;
+      padding-top: .6rem;
+      text-align: center;
+    }
+
+    .dropdown-footer a {
+      font-family: 'Jost', sans-serif;
+      font-size: .72rem;
+      font-weight: 600;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: var(--gold-dark);
+    }
+
+    /* Mobile Hamburger */
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 5px;
+      width: 42px;
+      height: 42px;
+      padding: 0;
+      background: rgba(197, 160, 89, 0.1);
+      border: 1px solid rgba(197, 160, 89, 0.3);
+      border-radius: 50%;
+      cursor: pointer;
+      z-index: 1200;
+      transition: all .3s ease;
+    }
+    .hamburger:hover {
+      background: rgba(197, 160, 89, 0.2);
+    }
+
+    .hamburger span {
+      display: block;
+      width: 20px;
+      height: 2px;
+      background: var(--text-dark);
+      border-radius: 2px;
+      transition: all .3s cubic-bezier(0.2, 0.8, 0.2, 1);
+      transform-origin: center;
+    }
+    .hamburger.open span:nth-child(1),
+    .hamburger.active span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .hamburger.open span:nth-child(2),
+    .hamburger.active span:nth-child(2) { opacity: 0; transform: scaleX(0); }
+    .hamburger.open span:nth-child(3),
+    .hamburger.active span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+    /* Mobile Overlay Backdrop */
+    .hamburger.open span:nth-child(1) {
+      transform: translateY(7px) rotate(45deg);
+    }
+
+    .hamburger.open span:nth-child(2) {
+      opacity: 0;
+    }
+
+    .hamburger.open span:nth-child(3) {
+      transform: translateY(-7px) rotate(-45deg);
+    }
+
+    .mobile-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(36, 26, 18, 0.55);
+      backdrop-filter: blur(6px);
+      -webkit-backdrop-filter: blur(6px);
+      z-index: 1250;
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
+      transition: opacity .35s ease, visibility .35s ease;
+    }
+    .mobile-overlay.open,
+    .mobile-overlay.active {
+      opacity: 1;
+      visibility: visible;
+      pointer-events: auto;
+    }
+
+    /* Mobile Drawer */
+    .mobile-menu {
+      position: fixed;
+      top: 0; right: 0;
+      width: min(340px, 86vw);
+      height: 100vh;
+      height: 100dvh;
+      background: var(--bg-primary);
+      z-index: 1300;
+      display: flex;
+      flex-direction: column;
+      padding: 1.5rem 1.6rem 2.5rem;
+      box-shadow: -10px 0 45px rgba(36, 26, 18, 0.2);
+      transform: translateX(105%);
+      transition: transform .38s cubic-bezier(0.2, 0.8, 0.2, 1);
+      overflow-y: auto;
+      -webkit-overflow-scrolling: touch;
+    }
+    .mobile-menu.open,
+    .mobile-menu.active {
+      transform: translateX(0);
+    }
+    .mobile-menu-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-bottom: 1.2rem;
+      border-bottom: 1px solid var(--beige);
+      margin-bottom: 1.2rem;
+    }
+    .mobile-close-btn {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: rgba(197, 160, 89, 0.12);
+      border: 1px solid rgba(197, 160, 89, 0.3);
+      color: var(--text-dark);
+      font-size: 1.1rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: all var(--transition);
+    }
+    .mobile-close-btn:hover {
+      background: var(--gold);
+      color: #FFF;
+      transform: rotate(90deg);
+    }
+    .mobile-nav-links {
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+    }
+    .mobile-nav-link {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: var(--text-dark);
+      display: block;
+      padding: .45rem 0;
+      transition: color var(--transition);
+      text-decoration: none;
+    }
+    .mobile-nav-link:hover { color: var(--gold); }
+
+    .mobile-nav-group {
+      margin: .6rem 0 .9rem;
+      padding-left: .8rem;
+      border-left: 2px solid var(--gold);
+      display: flex;
+      flex-direction: column;
+      gap: .25rem;
+    }
+
+    .mobile-group-title {
+      font-family: 'Jost', sans-serif;
+      font-size: .7rem;
+      font-weight: 600;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      color: var(--gold-dark);
+      margin-bottom: .35rem;
+    }
+
+    .mobile-nav-sublink {
+      display: block;
+      font-family: 'Jost', sans-serif;
+      font-size: .88rem;
+      color: var(--text-medium);
+      padding: .35rem 0;
+      transition: all var(--transition);
+      text-decoration: none;
+    }
+    .mobile-nav-sublink:hover { color: var(--gold-dark); transform: translateX(3px); }
+    .mobile-menu-footer {
+      margin-top: 1.5rem;
+      padding-top: 1.2rem;
+      border-top: 1px solid var(--beige);
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+    .mobile-contact-info {
+      display: flex;
+      flex-direction: column;
+      gap: .3rem;
+      font-size: .78rem;
+      color: var(--text-light);
+    }
+
+    .mobile-nav-sublink:hover {
+      color: var(--gold-dark);
+    }
+
+    /* Back link button in navbar */
+    .nav-back-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: .45rem;
+      font-family: 'Jost', sans-serif;
+      font-size: .78rem;
+      font-weight: 600;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: var(--gold-dark);
+      background: rgba(197, 160, 89, 0.12);
+      padding: .5rem 1.2rem;
+      border-radius: var(--radius-pill);
+      border: 1px solid rgba(197, 160, 89, 0.3);
+      transition: all var(--transition);
+    }
+
+    .nav-back-btn:hover {
+      background: var(--gold);
+      color: var(--white);
+      transform: translateX(-3px);
+    }
+
+    /* ============================================================
+       BREADCRUMB & SERVICE SWITCHER BAR
+    ============================================================ */
+    .breadcrumb-bar {
+      margin-top: 5.5rem;
+      padding: 1.4rem 0 .8rem;
+      background: var(--bg-primary);
+      border-bottom: 1px solid var(--beige);
+    }
+
+    .breadcrumb-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .breadcrumbs {
+      display: flex;
+      align-items: center;
+      gap: .6rem;
+      font-family: 'Jost', sans-serif;
+      font-size: .82rem;
+      color: var(--text-light);
+    }
+
+    .breadcrumbs a {
+      color: var(--text-medium);
+      transition: color var(--transition);
+    }
+
+    .breadcrumbs a:hover {
+      color: var(--gold-dark);
+    }
+
+    .breadcrumbs .cur {
+      color: var(--gold-dark);
+      font-weight: 500;
+    }
+
+    /* Service Switcher Tabs (Instant Tab Switcher without reloading) */
+    .service-switcher-bar {
+      padding: 1rem 0;
+      background: var(--bg-secondary);
+      border-bottom: 1px solid var(--beige);
+    }
+
+    .switcher-inner {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: .7rem;
+      flex-wrap: wrap;
+    }
+
+    .switcher-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: .45rem;
+      font-family: 'Jost', sans-serif;
+      font-size: .78rem;
+      font-weight: 500;
+      letter-spacing: .04em;
+      color: var(--text-dark);
+      background: var(--white);
+      border: 1px solid var(--beige);
+      padding: .5rem 1.15rem;
+      border-radius: var(--radius-pill);
+      transition: all var(--transition);
+      cursor: pointer;
+    }
+
+    .switcher-pill:hover,
+    .switcher-pill.active {
+      background: linear-gradient(135deg, var(--gold), var(--gold-dark));
+      color: var(--white);
+      border-color: var(--gold);
+      transform: translateY(-2px);
+      box-shadow: 0 4px 14px rgba(197, 160, 89, 0.35);
+    }
+
+    /* ============================================================
+       SERVICE DETAIL HERO BANNER
+    ============================================================ */
+    .sd-hero {
+      padding: 4.5rem 0 5rem;
+      background: linear-gradient(135deg, #FAF7F2 0%, #F5EFEB 50%, #ECE2D5 100%);
+      position: relative;
+    }
+
+    .sd-hero-grid {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      align-items: center;
+      gap: 4rem;
+    }
+
+    .sd-hero-content {
+      position: relative;
+      z-index: 2;
+    }
+
+    .sd-badge-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: .6rem;
+      background: rgba(255, 255, 255, 0.9);
+      border: 1px solid rgba(197, 160, 89, 0.4);
+      padding: .45rem 1.2rem;
+      border-radius: var(--radius-pill);
+      font-family: 'Jost', sans-serif;
+      font-size: .75rem;
+      font-weight: 600;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      color: var(--gold-dark);
+      margin-bottom: 1.4rem;
+    }
+
+    .sd-hero-title {
+      font-size: clamp(2.8rem, 4.8vw, 4.2rem);
+      line-height: 1.1;
+      margin-bottom: 1.2rem;
+    }
+
+    .sd-hero-desc {
+      font-size: 1.08rem;
+      line-height: 1.85;
+      color: var(--text-medium);
+      margin-bottom: 2.2rem;
+      max-width: 540px;
+    }
+
+    .sd-hero-btns {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+      margin-bottom: 2.2rem;
+    }
+
+    .sd-price-highlight {
+      display: inline-flex;
+      align-items: center;
+      gap: 1.2rem;
+      background: var(--white);
+      border: 1px solid var(--beige);
+      padding: .85rem 1.6rem;
+      border-radius: 16px;
+      box-shadow: var(--shadow-subtle);
+    }
+
+    .sd-price-label {
+      font-family: 'Jost', sans-serif;
+      font-size: .7rem;
+      letter-spacing: .15em;
+      text-transform: uppercase;
+      color: var(--text-light);
+    }
+
+    .sd-price-val {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.55rem;
+      font-weight: 600;
+      color: var(--gold-dark);
+      line-height: 1.2;
+    }
+
+    /* Hero Right Arch Image */
+    .sd-hero-visual {
+      position: relative;
+      max-width: 440px;
+      margin: 0 auto;
+    }
+
+    .sd-arch-frame {
+      aspect-ratio: 4 / 5.2;
+      border-radius: 180px 180px 32px 32px;
+      overflow: hidden;
+      border: 2px solid rgba(197, 160, 89, 0.45);
+      box-shadow: 0 20px 50px rgba(36, 26, 18, 0.12), 0 0 0 8px rgba(255, 255, 255, 0.85);
+      background: var(--bg-secondary);
+    }
+
+    .sd-arch-frame img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform .7s ease;
+    }
+
+    .sd-arch-frame:hover img {
+      transform: scale(1.04);
+    }
+
+    .sd-floating-badge {
+      position: absolute;
+      bottom: 22px;
+      left: 20px;
+      right: 20px;
+      background: rgba(255, 255, 255, 0.96);
+      backdrop-filter: blur(14px);
+      border: 1px solid rgba(197, 160, 89, 0.4);
+      border-radius: 20px;
+      padding: 1rem 1.3rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      box-shadow: 0 12px 35px rgba(36, 26, 18, 0.1);
+    }
+
+    /* ============================================================
+       PACKAGE INCLUSIONS SECTION
+    ============================================================ */
+    .sd-inclusions {
+      padding: 6.5rem 0;
+      background: var(--bg-primary);
+    }
+
+    .sd-section-header {
+      text-align: center;
+      margin-bottom: 4rem;
+    }
+
+    .inclusions-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1.6rem;
+    }
+
+    .inclusion-card {
+      background: var(--white);
+      border: 1px solid var(--beige);
+      border-radius: var(--radius-card);
+      padding: 2.2rem 1.8rem;
+      transition: all var(--transition);
+      display: flex;
+      flex-direction: column;
+    }
+
+    .inclusion-card:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow-hover);
+      border-color: rgba(197, 160, 89, 0.45);
+    }
+
+    .inc-icon {
+      width: 52px;
+      height: 52px;
+      border-radius: 50%;
+      background: rgba(197, 160, 89, 0.12);
+      border: 1px solid rgba(197, 160, 89, 0.3);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.45rem;
+      margin-bottom: 1.2rem;
+      transition: all var(--transition);
+    }
+
+    .inclusion-card:hover .inc-icon {
+      background: linear-gradient(135deg, var(--gold), var(--gold-dark));
+      color: #FFF;
+      transform: scale(1.08);
+    }
+
+    .inclusion-card h4 {
+      font-size: 1.2rem;
+      margin-bottom: .6rem;
+      color: var(--text-dark);
+    }
+
+    .inclusion-card p {
+      font-size: .86rem;
+      line-height: 1.7;
+    }
+
+    /* ============================================================
+       PLANNING PROCESS TIMELINE
+    ============================================================ */
+    .sd-process {
+      padding: 6.5rem 0;
+      background: var(--bg-secondary);
+    }
+
+    .process-timeline {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 2rem;
+      position: relative;
+    }
+
+    .process-timeline::before {
+      content: '';
+      position: absolute;
+      top: 45px;
+      left: 5%;
+      right: 5%;
+      height: 2px;
+      background: linear-gradient(90deg, var(--gold), var(--gold-dark));
+      opacity: 0.35;
+      z-index: 1;
+    }
+
+    .step-card {
+      background: var(--white);
+      border: 1px solid var(--beige);
+      border-radius: var(--radius-card);
+      padding: 2.4rem 1.8rem;
+      text-align: center;
+      position: relative;
+      z-index: 2;
+      transition: all var(--transition);
+    }
+
+    .step-card:hover {
+      transform: translateY(-6px);
+      box-shadow: var(--shadow-hover);
+    }
+
+    .step-num-bubble {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--gold), var(--gold-dark));
+      color: var(--white);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.4rem;
+      font-weight: 700;
+      margin: 0 auto 1.4rem;
+      box-shadow: 0 6px 18px rgba(197, 160, 89, 0.35);
+      border: 3px solid var(--white);
+    }
+
+    .step-card h3 {
+      font-size: 1.25rem;
+      margin-bottom: .6rem;
+    }
+
+    .step-card p {
+      font-size: .86rem;
+      line-height: 1.7;
+    }
+
+    /* ============================================================
+       SERVICE PHOTO GALLERY
+    ============================================================ */
+    .sd-gallery {
+      padding: 6.5rem 0;
+      background: var(--bg-primary);
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-auto-rows: 270px;
+      gap: 1.4rem;
+    }
+
+    .gallery-grid-item {
+      position: relative;
+      overflow: hidden;
+      border-radius: var(--radius-card);
+      box-shadow: var(--shadow-subtle);
+    }
+
+    .gallery-grid-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform .7s var(--transition);
+    }
+
+    .gallery-grid-item:hover img {
+      transform: scale(1.06);
+    }
+
+    .gallery-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(36, 26, 18, 0.8) 0%, transparent 60%);
+      opacity: 0;
+      transition: opacity .4s ease;
+      display: flex;
+      align-items: flex-end;
+      padding: 1.5rem;
+      color: #FFF;
+      font-family: 'Jost', sans-serif;
+      font-size: .82rem;
+      font-weight: 500;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+    }
+
+    .gallery-grid-item:hover .gallery-overlay {
+      opacity: 1;
+    }
+
+    /* ============================================================
+       INVESTMENT PACKAGES / TIERS
+    ============================================================ */
+    .sd-pricing {
+      padding: 6.5rem 0;
+      background: var(--bg-secondary);
+    }
+
+    .pricing-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+      align-items: stretch;
+    }
+
+    .pricing-card {
+      background: var(--white);
+      border: 1px solid var(--beige);
+      border-radius: 24px;
+      padding: 3rem 2.2rem;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      transition: all var(--transition);
+    }
+
+    .pricing-card:hover {
+      transform: translateY(-7px);
+      box-shadow: var(--shadow-hover);
+    }
+
+    .pricing-card.featured {
+      border: 2px solid var(--gold);
+      box-shadow: 0 15px 40px rgba(197, 160, 89, 0.18);
+      background: linear-gradient(180deg, #FFFFFF 0%, #FAF6EE 100%);
+    }
+
+    .pricing-ribbon {
+      position: absolute;
+      top: -14px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: linear-gradient(135deg, var(--gold), var(--gold-dark));
+      color: #FFF;
+      font-family: 'Jost', sans-serif;
+      font-size: .68rem;
+      font-weight: 600;
+      letter-spacing: .15em;
+      text-transform: uppercase;
+      padding: .35rem 1.2rem;
+      border-radius: var(--radius-pill);
+      box-shadow: 0 4px 14px rgba(197, 160, 89, 0.35);
+    }
+
+    .pricing-tier-name {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.85rem;
+      margin-bottom: .3rem;
+    }
+
+    .pricing-tagline {
+      font-size: .84rem;
+      color: var(--text-light);
+      margin-bottom: 1.2rem;
+    }
+
+    .pricing-pill-badge {
+      display: inline-block;
+      font-family: 'Jost', sans-serif;
+      font-size: .74rem;
+      font-weight: 600;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      color: var(--gold-dark);
+      background: rgba(197, 160, 89, 0.12);
+      border: 1px solid rgba(197, 160, 89, 0.3);
+      padding: .35rem 1rem;
+      border-radius: var(--radius-pill);
+      margin-bottom: 1.6rem;
+      align-self: flex-start;
+    }
+
+    .pricing-card.featured .pricing-pill-badge {
+      background: var(--gold);
+      color: #FFF;
+      border-color: var(--gold);
+    }
+
+    .pricing-features {
+      margin-bottom: 2.2rem;
+      flex-grow: 1;
+    }
+
+    .pricing-features li {
+      display: flex;
+      align-items: center;
+      gap: .65rem;
+      font-size: .88rem;
+      color: var(--text-medium);
+      margin-bottom: .85rem;
+    }
+
+    .pricing-features li::before {
+      content: '✓';
+      color: var(--gold);
+      font-weight: 700;
+    }
+
+    .pricing-card .btn-gold,
+    .pricing-card .btn-outline {
+      width: 100%;
+      justify-content: center;
+    }
+
+    /* ============================================================
+       BOOKING INQUIRY CTA BANNER
+    ============================================================ */
+    .sd-inquiry {
+      padding: 6.5rem 0;
+      background: var(--bg-primary);
+    }
+
+    .inquiry-banner {
+      background: linear-gradient(135deg, #241A12 0%, #3D2C1F 100%);
+      color: #FFF;
+      border-radius: 28px;
+      padding: 4.5rem 3.5rem;
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      align-items: center;
+      gap: 3.5rem;
+      box-shadow: 0 25px 60px rgba(36, 26, 18, 0.2);
+    }
+
+    .inquiry-banner h2 {
+      color: #FFF;
+      font-size: clamp(2.2rem, 3.8vw, 3.2rem);
+      margin-bottom: 1rem;
+    }
+
+    .inquiry-banner p {
+      color: rgba(255, 255, 255, 0.8);
+      font-size: 1rem;
+      margin-bottom: 2rem;
+      line-height: 1.8;
+    }
+
+    .inquiry-btns {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .inquiry-form-card {
+      background: #FFF;
+      border-radius: var(--radius-card);
+      padding: 2.4rem;
+      color: var(--text-dark);
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+    }
+
+    .inquiry-form-card h3 {
+      font-size: 1.6rem;
+      margin-bottom: .4rem;
+    }
+
+    .inquiry-form-card p {
+      font-size: .82rem;
+      color: var(--text-light);
+      margin-bottom: 1.4rem;
+    }
+
+    .if-group {
+      margin-bottom: 1rem;
+    }
+
+    .if-group input,
+    .if-group select,
+    .if-group textarea {
+      width: 100%;
+      padding: .85rem 1.1rem;
+      background: var(--bg-primary);
+      border: 1.5px solid var(--beige);
+      border-radius: var(--radius-input);
+      font-family: 'Jost', sans-serif;
+      font-size: .88rem;
+      color: var(--text-dark);
+      outline: none;
+    }
+
+    .if-group input:focus,
+    .if-group select:focus,
+    .if-group textarea:focus {
+      border-color: var(--gold);
+      box-shadow: 0 0 0 3px rgba(197, 160, 89, 0.15);
+    }
+
+    .if-submit .btn-gold {
+      width: 100%;
+      padding: .95rem;
+    }
+
+    /* ============================================================
+       FOOTER
+    ============================================================ */
+    footer {
+      background: var(--text-dark);
+      color: rgba(255, 255, 255, 0.7);
+      padding: 5rem 0 2rem;
+    }
+
+    .footer-top {
+      display: grid;
+      grid-template-columns: 1.4fr 1fr 1fr;
+      gap: 4rem;
+      padding-bottom: 3.5rem;
+      border-bottom: 1px solid rgba(197, 160, 89, 0.2);
+    }
+
+    .footer-brand .logo-evara {
+      color: #FFF;
+    }
+
+    .footer-brand .logo-events {
+      color: var(--gold);
+    }
+
+    .footer-brand p {
+      font-size: .88rem;
+      line-height: 1.8;
+      color: rgba(255, 255, 255, 0.55);
+      margin: 1rem 0 1.5rem;
+      max-width: 300px;
+    }
+
+    .footer-col h4 {
+      font-size: 1.2rem;
+      color: #FFF;
+      margin-bottom: 1.2rem;
+    }
+
+    .footer-col ul li {
+      margin-bottom: .65rem;
+    }
+
+    .footer-col ul li a {
+      font-size: .85rem;
+      color: rgba(255, 255, 255, 0.6);
+      transition: color var(--transition);
+    }
+
+    .footer-col ul li a:hover {
+      color: var(--gold);
+    }
+
+    .footer-bottom {
+      padding-top: 1.8rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: .78rem;
+      color: rgba(255, 255, 255, 0.4);
+    }
+
+    .footer-bottom a {
+      color: var(--gold);
+    }
+
+    /* Responsive */
+    @media (max-width: 1024px) {
+      .sd-hero-grid {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 3rem;
+      }
+
+      .sd-hero-desc {
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .sd-hero-btns {
+        justify-content: center;
+      }
+
+      .inclusions-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .process-timeline {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .process-timeline::before {
+        display: none;
+      }
+
+      .pricing-grid {
+        grid-template-columns: 1fr;
+        max-width: 500px;
+        margin: 0 auto;
+      }
+
+      .inquiry-banner {
+        grid-template-columns: 1fr;
+        padding: 3rem 2rem;
+      }
+    }
+
+    @media (max-width: 992px) {
+      .nav-links {
+        display: none;
+      }
+
+      .hamburger {
+        display: flex;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .inclusions-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .process-timeline {
+        grid-template-columns: 1fr;
+      }
+
+      .gallery-grid {
+        grid-template-columns: 1fr;
+        grid-auto-rows: 240px;
+      }
+
+      .footer-top {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+      }
+
+      .breadcrumb-inner {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- MOBILE MENU OVERLAY -->
+  <div class="mobile-overlay" id="mobileOverlay"></div>
+
+  <!-- MOBILE MENU (With Hierarchical Dropdown Groups) -->
+  <nav class="mobile-menu" id="mobileMenu" aria-label="Mobile Navigation">
+    <div class="mobile-menu-header">
+      <a href="index.html#hero" class="nav-logo" style="text-decoration:none;">
+        <div class="logo-crest">✦</div>
+        <div class="logo-text">
+          <span class="logo-evara">Evara</span>
+          <span class="logo-events">Events</span>
+        </div>
+      </a>
+      <button class="mobile-close-btn" id="mobileCloseBtn" aria-label="Close menu">✕</button>
+    </div>
+
+    <div class="mobile-nav-links">
+      <a href="index.html#hero" class="mobile-nav-link">Home</a>
+
+      <!-- About & Blog Submenu -->
+      <div class="mobile-nav-group">
+        <div class="mobile-group-title">About &amp; Journal ▾</div>
+        <a href="index.html#about" class="mobile-nav-sublink">🏛️ About Evara</a>
+        <a href="blog-detail.html" class="mobile-nav-sublink">📰 Evara Journal (Blog Page)</a>
+      </div>
+
+      <!-- Services Downward List -->
+      <div class="mobile-nav-group">
+        <div class="mobile-group-title">Our Services ▾</div>
+        <a href="service-detail.html?service=wedding" class="mobile-nav-sublink">💍 Wedding Planning</a>
+        <a href="service-detail.html?service=birthday" class="mobile-nav-sublink">🎂 Birthday Celebrations</a>
+        <a href="service-detail.html?service=corporate" class="mobile-nav-sublink">🏢 Corporate Events</a>
+        <a href="service-detail.html?service=engagement" class="mobile-nav-sublink">💫 Engagement Ceremonies</a>
+        <a href="service-detail.html?service=anniversary" class="mobile-nav-sublink">🥂 Anniversary Celebrations</a>
+        <a href="service-detail.html?service=private" class="mobile-nav-sublink">✨ Private Parties</a>
+      </div>
+
+      <a href="index.html#portfolio" class="mobile-nav-link">Portfolio</a>
+      <a href="blog-detail.html" class="mobile-nav-link">Blog / Journal</a>
+      <a href="index.html#testimonials" class="mobile-nav-link">Testimonials</a>
+      <a href="#inquirySection" class="mobile-nav-link">Book Consultation</a>
+    </div>
+
+    <div class="mobile-menu-footer">
+      <a href="https://wa.me/919876543210" class="btn-gold" style="width:100%; justify-content:center; padding:.85rem 1.4rem;" target="_blank" rel="noopener">
+        WhatsApp Us ✦
+      </a>
+      <div class="mobile-contact-info">
+        <span>📞 +91 98765 43210</span>
+        <span>✉️ hello@evaraevents.com</span>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ===================== NAVBAR ===================== -->
+  <header id="navbar">
+    <div class="container">
+      <nav class="nav-inner">
+        <a href="index.html#hero" class="nav-logo">
+          <div class="logo-crest">✦</div>
+          <div class="logo-text">
+            <span class="logo-evara">Evara</span>
+            <span class="logo-events">Events</span>
+          </div>
+        </a>
+
+        <ul class="nav-links">
+          <li><a href="index.html#hero">Home</a></li>
+
+          <!-- 1. ABOUT WITH DOWNWARD DROPDOWN -->
+          <li class="nav-dropdown-item" id="aboutDropdownItem">
+            <button class="nav-dropdown-btn" aria-haspopup="true" aria-expanded="false">
+              About
+              <span class="dropdown-arrow">▾</span>
+            </button>
+            <div class="nav-dropdown-menu about-dropdown">
+              <a href="index.html#about" class="dropdown-link">
+                <div class="dd-icon">🏛️</div>
+                <div class="dd-content">
+                  <span class="dd-title">About Evara</span>
+                  <span class="dd-sub">Our 10-year journey &amp; story</span>
+                </div>
+              </a>
+              <a href="blog-detail.html" class="dropdown-link">
+                <div class="dd-icon">📰</div>
+                <div class="dd-content">
+                  <span class="dd-title">Evara Journal (Blog)</span>
+                  <span class="dd-sub">Event trends, ideas &amp; inspirations</span>
+                </div>
+              </a>
+            </div>
+          </li>
+
+          <!-- 2. SERVICES WITH DOWNWARD DROPDOWN -->
+          <li class="nav-dropdown-item" id="servicesDropdownItem">
+            <button class="nav-dropdown-btn active" aria-haspopup="true" aria-expanded="false">
+              Services
+              <span class="dropdown-arrow">▾</span>
+            </button>
+            <div class="nav-dropdown-menu services-dropdown">
+              <a href="service-detail.html?service=wedding" class="dropdown-link">
+                <div class="dd-icon">💍</div>
+                <div class="dd-content">
+                  <span class="dd-title">Wedding Planning</span>
+                  <span class="dd-sub">Full styling &amp; coordination</span>
+                </div>
+              </a>
+              <a href="service-detail.html?service=birthday" class="dropdown-link">
+                <div class="dd-icon">🎂</div>
+                <div class="dd-content">
+                  <span class="dd-title">Birthday Celebrations</span>
+                  <span class="dd-sub">Milestone parties &amp; custom themes</span>
+                </div>
+              </a>
+              <a href="service-detail.html?service=corporate" class="dropdown-link">
+                <div class="dd-icon">🏢</div>
+                <div class="dd-content">
+                  <span class="dd-title">Corporate Events</span>
+                  <span class="dd-sub">Conferences, launches &amp; galas</span>
+                </div>
+              </a>
+              <a href="service-detail.html?service=engagement" class="dropdown-link">
+                <div class="dd-icon">💫</div>
+                <div class="dd-content">
+                  <span class="dd-title">Engagement Ceremonies</span>
+                  <span class="dd-sub">Romantic proposal &amp; ring settings</span>
+                </div>
+              </a>
+              <a href="service-detail.html?service=anniversary" class="dropdown-link">
+                <div class="dd-icon">🥂</div>
+                <div class="dd-content">
+                  <span class="dd-title">Anniversary Celebrations</span>
+                  <span class="dd-sub">Candlelit romance &amp; jubilees</span>
+                </div>
+              </a>
+              <a href="service-detail.html?service=private" class="dropdown-link">
+                <div class="dd-icon">✨</div>
+                <div class="dd-content">
+                  <span class="dd-title">Private Parties</span>
+                  <span class="dd-sub">Exclusive dinners &amp; soirées</span>
+                </div>
+              </a>
+            </div>
+          </li>
+
+          <li><a href="index.html#portfolio">Portfolio</a></li>
+          <li><a href="blog-detail.html">Blog</a></li>
+          <li><a href="index.html#testimonials">Testimonials</a></li>
+          <li><a href="#inquirySection">Contact</a></li>
+        </ul>
+
+        <div style="display:flex; align-items:center; gap:1rem;">
+          <a href="https://wa.me/919876543210" class="btn-whatsapp" target="_blank" rel="noopener">
+            WhatsApp
+          </a>
+          <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ===================== BREADCRUMBS ===================== -->
+  <div class="breadcrumb-bar">
+    <div class="container">
+      <div class="breadcrumb-inner">
+        <div class="breadcrumbs">
+          <a href="index.html#hero">Home</a>
+          <span>/</span>
+          <a href="index.html#services">Services</a>
+          <span>/</span>
+          <span class="cur" id="bcServiceName">Wedding Planning</span>
+        </div>
+        <div
+          style="font-family:'Jost',sans-serif; font-size:.75rem; letter-spacing:.15em; text-transform:uppercase; color:var(--gold-dark); font-weight:500;">
+          ✦ Bespoke Event Curation ✦
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===================== SERVICE SWITCHER TABS ===================== -->
+  <div class="service-switcher-bar">
+    <div class="container">
+      <div class="switcher-inner">
+        <button class="switcher-pill active" data-svc="wedding">💍 Wedding Planning</button>
+        <button class="switcher-pill" data-svc="birthday">🎂 Birthday Celebrations</button>
+        <button class="switcher-pill" data-svc="corporate">🏢 Corporate Events</button>
+        <button class="switcher-pill" data-svc="engagement">💫 Engagement Ceremonies</button>
+        <button class="switcher-pill" data-svc="anniversary">🥂 Anniversary Celebrations</button>
+        <button class="switcher-pill" data-svc="private">✨ Private Parties</button>
+      </div>
+    </div>
+  </div>
+
+  <main>
+    <!-- ===================== SERVICE DETAIL HERO ===================== -->
+    <section class="sd-hero">
+      <div class="container">
+        <div class="sd-hero-grid">
+          <!-- Left: Hero Content -->
+          <div class="sd-hero-content">
+            <div class="sd-badge-pill" id="sdTag">✦ Signature Luxury Service ✦</div>
+            <h1 class="sd-hero-title" id="sdTitle">Wedding Planning</h1>
+            <div class="gold-divider"></div>
+            <p class="sd-hero-desc" id="sdDesc">
+              Your dream wedding, meticulously planned and flawlessly executed. We handle every detail, from decor to
+              catering, so you can savour every single magical moment.
+            </p>
+
+            <div class="sd-hero-btns">
+              <a href="#inquirySection" class="btn-gold">
+                Book a Consultation
+                <span class="btn-arrow">→</span>
+              </a>
+              <a href="https://wa.me/919876543210" class="btn-outline" target="_blank" rel="noopener">
+                Chat on WhatsApp
+              </a>
+            </div>
+
+            <div class="sd-price-highlight">
+              <div>
+                <div class="sd-price-label">Custom Planning</div>
+                <div class="sd-price-val" id="sdPrice">Tailored to Your Budget</div>
+              </div>
+              <div style="font-size:.78rem; color:var(--text-light); line-height:1.4;">
+                Every event is uniquely customized.<br>Contact us for a free personalized estimate.
+              </div>
+            </div>
+          </div>
+
+          <!-- Right: Curvy Arch Photo Frame -->
+          <div class="sd-hero-visual">
+            <div class="sd-arch-frame">
+              <img id="sdHeroImg"
+                src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=1000&q=85"
+                alt="Service Showcase" />
+              <div class="sd-floating-badge">
+                <div>
+                  <strong style="display:block; font-family:'Cormorant Garamond',serif; font-size:1.15rem;"
+                    id="sdBadgeTitle">Royal Wedding Decor</strong>
+                  <span
+                    style="font-size:.7rem; color:var(--gold-dark); text-transform:uppercase; letter-spacing:.1em;">✦
+                    Handcrafted by Evara</span>
+                </div>
+                <div style="color:var(--gold); font-size:.9rem;">★★★★★</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== PACKAGE INCLUSIONS ===================== -->
+    <section class="sd-inclusions">
+      <div class="container">
+        <div class="sd-section-header">
+          <span class="section-tag">What is Included</span>
+          <h2 class="section-heading">Comprehensive Inclusions</h2>
+          <div class="gold-divider cx"></div>
+          <p style="max-width:540px; margin:0 auto;">Everything required to bring your celebration to life with
+            perfection, style, and peace of mind.</p>
+        </div>
+
+        <div class="inclusions-grid" id="inclusionsGrid">
+          <!-- Dynamically populated -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== PLANNING PROCESS ===================== -->
+    <section class="sd-process">
+      <div class="container">
+        <div class="sd-section-header">
+          <span class="section-tag">The Workflow</span>
+          <h2 class="section-heading">How We Bring It to Life</h2>
+          <div class="gold-divider cx"></div>
+          <p style="max-width:540px; margin:0 auto;">Our proven 4-step curation method guarantees flawless execution
+            from the first sketch to the final toast.</p>
+        </div>
+
+        <div class="process-timeline" id="processTimeline">
+          <!-- Dynamically populated -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== SERVICE PHOTO GALLERY ===================== -->
+    <section class="sd-gallery">
+      <div class="container">
+        <div class="sd-section-header">
+          <span class="section-tag">Real Celebrations</span>
+          <h2 class="section-heading">Visual Showcase</h2>
+          <div class="gold-divider cx"></div>
+          <p style="max-width:500px; margin:0 auto;">Glimpses into past events we have curated with boundless passion
+            and precision.</p>
+        </div>
+
+        <div class="gallery-grid" id="serviceGallery">
+          <!-- Dynamically populated -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== PLANNING PACKAGES ===================== -->
+    <section class="sd-pricing" id="packagesSection">
+      <div class="container">
+        <div class="sd-section-header">
+          <span class="section-tag">Planning Packages</span>
+          <h2 class="section-heading">Choose Your Package</h2>
+          <div class="gold-divider cx"></div>
+          <p style="max-width:520px; margin:0 auto;">Choose a package that suits your event scale, or let us create a
+            custom plan made just for you.</p>
+        </div>
+
+        <div class="pricing-grid" id="packagesGrid">
+          <!-- Dynamically populated per service -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== BOOKING INQUIRY CTA ===================== -->
+    <section class="sd-inquiry" id="inquirySection">
+      <div class="container">
+        <div class="inquiry-banner">
+          <div>
+            <span class="section-tag" style="color:var(--gold-light);">Let's Connect</span>
+            <h2>Ready to Craft Your Celebration?</h2>
+            <p>Tell us about your date, venue preferences, and dream vision. Our master planners will craft a tailored
+              proposal and schedule a complimentary design consultation.</p>
+
+            <div class="inquiry-btns">
+              <a href="https://wa.me/919876543210" class="btn-whatsapp" target="_blank" rel="noopener">
+                Instant WhatsApp Quote
+              </a>
+              <a href="tel:+919876543210" class="btn-outline" style="border-color:rgba(255,255,255,0.4); color:#FFF;">
+                📞 +91 98765 43210
+              </a>
+            </div>
+          </div>
+
+          <!-- Quick Form -->
+          <div class="inquiry-form-card">
+            <h3>Request Consultation</h3>
+            <p>Tell us about your event and our senior planner will connect with you.</p>
+            <form id="sdInquiryForm">
+              <div class="if-group">
+                <input type="text" id="ifName" placeholder="Your Full Name" required />
+              </div>
+              <div class="if-group">
+                <input type="tel" id="ifPhone" placeholder="Phone Number" required />
+              </div>
+              <div style="display:grid; grid-template-columns:1fr 1fr; gap:.8rem; margin-bottom:.8rem;">
+                <input type="date" id="ifDate" placeholder="Event Date"
+                  style="width:100%; padding:.75rem 1rem; border:1px solid var(--beige); border-radius:12px; font-family:'Jost',sans-serif; font-size:.85rem; background:var(--white);" />
+                <select id="ifGuests"
+                  style="width:100%; padding:.75rem 1rem; border:1px solid var(--beige); border-radius:12px; font-family:'Jost',sans-serif; font-size:.85rem; background:var(--white); cursor:pointer;">
+                  <option value="" disabled selected>Guest Count</option>
+                  <option value="Under 50">Under 50 Guests</option>
+                  <option value="50-150">50 – 150 Guests</option>
+                  <option value="150-350">150 – 350 Guests</option>
+                  <option value="350-700">350 – 700 Guests</option>
+                  <option value="700+">700+ Guests</option>
+                </select>
+              </div>
+              <div class="if-group">
+                <select id="ifSelectedService">
+                  <option value="wedding">Wedding Planning</option>
+                  <option value="birthday">Birthday Celebrations</option>
+                  <option value="corporate">Corporate Events</option>
+                  <option value="engagement">Engagement Ceremonies</option>
+                  <option value="anniversary">Anniversary Celebrations</option>
+                  <option value="private">Private Parties</option>
+                </select>
+              </div>
+              <div class="if-group">
+                <textarea id="ifMessage" rows="3"
+                  placeholder="Tell us about your event vision, location, special ideas…"></textarea>
+              </div>
+              <div class="if-submit">
+                <button type="submit" class="btn-gold" style="width:100%; justify-content:center;">Submit Inquiry
+                  ✦</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+    </div>
+    </div>
+    </div>
+    </section>
+  </main>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer>
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="index.html#hero" class="nav-logo">
+            <div class="logo-crest">✦</div>
+            <div class="logo-text">
+              <span class="logo-evara">Evara</span>
+              <span class="logo-events">Events</span>
+            </div>
+          </a>
+          <p>Creating moments that become lifelong memories. We craft extraordinary celebrations with elegance,
+            artistry, and flawless precision.</p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Explore Services</h4>
+          <ul>
+            <li><a href="service-detail.html?service=wedding">Wedding Planning</a></li>
+            <li><a href="service-detail.html?service=birthday">Birthday Celebrations</a></li>
+            <li><a href="service-detail.html?service=corporate">Corporate Events</a></li>
+            <li><a href="service-detail.html?service=engagement">Engagement Ceremonies</a></li>
+            <li><a href="service-detail.html?service=anniversary">Anniversary Celebrations</a></li>
+            <li><a href="service-detail.html?service=private">Private Parties</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Contact &amp; Studio</h4>
+          <ul>
+            <li>📍 12 Rosewood Avenue, Bandra West, Mumbai</li>
+            <li>📞 +91 98765 43210</li>
+            <li>✉️ hello@evaraevents.com</li>
+            <li>🕐 Mon – Sat: 9:00 AM – 7:00 PM</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2025 <a href="index.html">Evara Events</a>. All rights reserved.</p>
+        <p><a href="index.html#hero">Return to Home</a> &nbsp;·&nbsp; <a href="index.html#blog">Evara Journal</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ===================== JAVASCRIPT ===================== -->
+  <script>
+    'use strict';
+
+    /* ——— COMPREHENSIVE SERVICE DATA REPOSITORY ——— */
+    const serviceDatabase = {
+      wedding: {
+        tag: 'Full Wedding Planning',
+        title: 'Wedding Planning',
+        desc: 'Your dream wedding, planned with care and beautifully executed. From flower decorations and stage setup to food and photography, we take care of every detail so you can relax and celebrate.',
+        budgetNote: 'Tailored to Your Budget',
+        badgeTitle: 'Wedding Stage & Decor',
+        heroImg: 'https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=1000&q=85',
+        inclusions: [
+          { icon: '🌸', title: 'Venue & Stage Styling', desc: 'Custom stage backdrops, entrance arches, floral arrangements, and romantic table settings.' },
+          { icon: '🍽️', title: 'Catering & Menu Planning', desc: 'Delicious menu curation, food tasting sessions, and complete dining arrangements for your guests.' },
+          { icon: '📸', title: 'Photography & Cinematography', desc: 'Candid wedding photography, couple portraits, drone videos, and highlight films.' },
+          { icon: '🕯️', title: 'Lighting & Ambiance', desc: 'Warm ambient lighting, chandeliers, fairy light canopies, and stage spotlights.' },
+          { icon: '🎵', title: 'Music & Entertainment', desc: 'DJs, live singers, traditional music artists, and crystal-clear sound systems.' },
+          { icon: '💌', title: 'Invitations & Signage', desc: 'Custom wedding invitation designs, welcome boards, and guest seating charts.' },
+          { icon: '🚗', title: 'Guest Hospitality & Welcoming', desc: 'Guest reception desk, assistance with room allocations, and friendly hospitality staff.' },
+          { icon: '💍', title: 'Complete Day-of Coordination', desc: 'Our team manages timings, vendors, and setup so your family can relax and celebrate.' }
+        ],
+        steps: [
+          { num: '1', title: 'First Discussion', desc: 'We listen to your ideas, traditions, guest count, and preferred style.' },
+          { num: '2', title: 'Design & Plan', desc: 'We share theme options, color schemes, and 3D stage layouts for your approval.' },
+          { num: '3', title: 'Vendor Coordination', desc: 'We handle all caterers, florists, photographers, and audio-visual teams.' },
+          { num: '4', title: 'Smooth Celebration', desc: 'Our team is on-site managing every detail so your celebration flows effortlessly.' }
+        ],
+        gallery: [
+          'https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=800&q=80',
+          'https://images.unsplash.com/photo-1511285560929-80b456fea0bc?auto=format&fit=crop&w=800&q=80',
+          'https://images.unsplash.com/photo-1522673607200-164d1b6ce486?auto=format&fit=crop&w=800&q=80'
+        ],
+        packages: [
+          {
+            ribbon: null,
+            tier: 'Essential Wedding',
+            tagline: 'Ideal for intimate ceremonies and day coordination',
+            badge: 'Intimate Weddings',
+            featured: false,
+            features: [
+              'Day-of Wedding Coordination',
+              'Stage Backdrop & Floral Entrance Arch',
+              'Mandap or Altar Styling',
+              'Sound System & Wireless Mics',
+              'Bridal Entry Coordination'
+            ]
+          },
+          {
+            ribbon: 'Most Popular',
+            tier: 'Signature Luxury',
+            tagline: 'Full styling, coordination, and vendor management',
+            badge: 'Full-Service Experience',
+            featured: true,
+            features: [
+              'End-to-End Event Planning',
+              'Grand Floral Stage & Aisle Styling',
+              'Full Ambient & Fairy Light Canopy',
+              'Catering & Menu Coordination',
+              'Live Music / DJ & Sound Engineering',
+              'Candid Photography & Cinematic Film',
+              'Dedicated On-Site Hospitality Team'
+            ]
+          },
+          {
+            ribbon: null,
+            tier: 'Grand Royal',
+            tagline: 'Multi-day celebrations with luxury custom themes',
+            badge: 'Multi-Day Celebrations',
+            featured: false,
+            features: [
+              'Sangeet, Mehendi & Wedding Planning',
+              'Custom 3D Theme Stage Blueprints',
+              'Celebrity Artist & Entertainment Curation',
+              'Drone Cinematography & Highlight Reel',
+              'Luxury Guest Logistics & Welcome Kits',
+              'VIP Lounges & Valet Management'
+            ]
+          }
+        ]
+      },
+
+      birthday: {
+        tag: 'Birthday Planning',
+        title: 'Birthday Celebrations',
+        desc: 'Milestone birthdays deserve a wonderful celebration. We create fun, personalized party setups with creative themes, custom cakes, interactive games, and great music for guests of all ages.',
+        budgetNote: 'Flexible Packages',
+        badgeTitle: 'Theme Birthday Decor',
+        heroImg: 'https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?auto=format&fit=crop&w=1000&q=85',
+        inclusions: [
+          { icon: '🎨', title: 'Custom Theme Decor', desc: 'Creative themes from balloon arches and photo booths to elegant dinner settings.' },
+          { icon: '🎂', title: 'Cake & Dessert Counter', desc: 'Custom birthday cakes, cupcakes, and sweet dessert displays.' },
+          { icon: '📸', title: 'Photo & Memory Corner', desc: 'Fun photo backdrops, instant camera stations, and memory photo frames.' },
+          { icon: '🍸', title: 'Drinks & Mocktail Bar', desc: 'Refreshing welcome drinks, signature mocktails, and beverage counters.' },
+          { icon: '🎵', title: 'DJ & Party Music', desc: 'Great sound systems, party lights, and energetic DJ playlists.' },
+          { icon: '🎁', title: 'Custom Return Gifts', desc: 'Personalized gift hampers and thank-you keepsakes for your guests.' },
+          { icon: '🌟', title: 'Entrance & Lighting', desc: 'Welcome signs, marquee light numbers, and warm party lights.' },
+          { icon: '📋', title: 'Full Event Coordination', desc: 'Our team takes care of setup and schedule so the host can enjoy the party.' }
+        ],
+        steps: [
+          { num: '1', title: 'Party Idea & Theme', desc: 'We learn about the birthday star’s favorite colors, hobbies, and style.' },
+          { num: '2', title: 'Theme Proposal', desc: 'You get clear theme ideas, cake designs, and entertainment options.' },
+          { num: '3', title: 'Venue Setup', desc: 'We transform your home, hall, or lawn into a vibrant party space.' },
+          { num: '4', title: 'Cake & Fun', desc: 'We manage cake cutting, music, and food timings smoothly.' }
+        ],
+        gallery: [
+          'https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?auto=format&fit=crop&w=800&q=80',
+          'https://images.unsplash.com/photo-1530103862676-de8c9debad1d?auto=format&fit=crop&w=800&q=80',
+          'https://images.unsplash.com/photo-1555244162-803834f70033?auto=format&fit=crop&w=800&q=80'
+        ],
+        packages: [
+          {
+            ribbon: null,
+            tier: 'Classic Party',
+            tagline: 'Perfect for intimate family gatherings at home or hall',
+            badge: 'Up to 50 Guests',
+            featured: false,
+            features: [
+              'Themed Balloon Arch & Backdrop',
+              'Cake Cutting Table Styling',
+              'Party Music & Sound Setup',
+              'Fun Photo Props Corner',
+              '2 Hours Dedicated Coordinator'
+            ]
+          },
+          {
+            ribbon: 'Most Popular',
+            tier: 'Signature Party',
+            tagline: 'Complete themed celebration with entertainment',
+            badge: '50 – 150 Guests',
+            featured: true,
+            features: [
+              'Custom Theme Stage & Photo Booth',
+              'Marquee Light Numbers / Letters',
+              'DJ, Party Lights & Dance Floor',
+              'Custom Birthday Cake Coordination',
+              'Interactive Games Host (MC)',
+              'Return Gift Packing & Table Setup'
+            ]
+          },
+          {
+            ribbon: null,
+            tier: 'Grand Soirée',
+            tagline: 'Luxury birthday celebration for milestone years',
+            badge: '150+ Guests',
+            featured: false,
+            features: [
+              'Grand Immersive Theme Styling',
+              'Live Mocktail / Beverage Counter',
+              'Candid Photographer & Video Clip',
+              'Live Acoustic Music / Band',
+              'Gourmet Dessert & Candy Station',
+              'Complete Event Management Team'
+            ]
+          }
+        ]
+      },
+
+      corporate: {
+        tag: 'Corporate Event Management',
+        title: 'Corporate Events',
+        desc: 'Professional, punctual, and well organized. From conferences and product launches to annual galas and award ceremonies, we deliver seamless events that reflect your company values.',
+        budgetNote: 'Custom Enterprise Quotes',
+        badgeTitle: 'Corporate Gala & Stage',
+        heroImg: 'https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&w=1000&q=85',
+        inclusions: [
+          { icon: '🎤', title: 'Stage & Audio-Visual Setup', desc: 'LED display walls, wireless microphones, podiums, and stage lighting.' },
+          { icon: '🏆', title: 'Award Show Management', desc: 'Trophy presentation cueing, background music, and stage production.' },
+          { icon: '🤝', title: 'VIP & Attendee Lounges', desc: 'Comfortable seating areas for networking and client meetings.' },
+          { icon: '🎬', title: 'Live Streaming & Video Recording', desc: 'High-definition video recording and live webinar streaming.' },
+          { icon: '🎨', title: 'Branding & Signage', desc: 'Welcome arches, backdrop banners, sponsor standees, and attendee badges.' },
+          { icon: '🍽️', title: 'Corporate Dining & High Tea', desc: 'Buffet arrangements, coffee counters, and formal dining schedules.' },
+          { icon: '📋', title: 'Registration & Check-in Desk', desc: 'Quick guest check-in, name tags, and welcoming hostesses.' },
+          { icon: '🛡️', title: 'On-Site Event Supervision', desc: 'Experienced event managers ensuring strictly on-time execution.' }
+        ],
+        steps: [
+          { num: '1', title: 'Objectives & Agenda', desc: 'We align on event goals, schedule, speaker list, and attendee count.' },
+          { num: '2', title: 'Stage & Technical Plan', desc: 'Detailed floor plan, audio-visual checklist, and run-of-show schedule.' },
+          { num: '3', title: 'Sound Check & Dry Run', desc: 'Testing microphones, presentation slides, and lighting in advance.' },
+          { num: '4', title: 'Punctual Execution', desc: 'Professional stage calling and time management throughout the event.' }
+        ],
+        gallery: [
+          'https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&w=800&q=80',
+          'https://images.unsplash.com/photo-1478147427282-58a87a120781?auto=format&fit=crop&w=800&q=80',
+          'https://images.unsplash.com/photo-1555244162-803834f70033?auto=format&fit=crop&w=800&q=80'
+        ],
+        packages: [
+          {
+            ribbon: null,
+            tier: 'Seminar & Meet',
+            tagline: 'Ideal for workshops, seminars, and business meetings',
+            badge: 'Day Sessions',
+            featured: false,
+            features: [
+              'Stage Podium & Backdrop Banner',
+              'High-Def Projector & Sound Setup',
+              'Attendee Registration Setup',
+              'Wireless Microphones & Tech Support',
+              'Refreshment & Tea Break Management'
+            ]
+          },
+          {
+            ribbon: 'Most Popular',
+            tier: 'Annual Gala & Awards',
+            tagline: 'Conferences, awards nights, and grand dinners',
+            badge: 'Full Production',
+            featured: true,
+            features: [
+              'Custom LED Wall & Stage Backdrop',
+              'Dynamic Stage Spotlights & Sound',
+              'Trophy & Award Presentation Cueing',
+              'Professional Event Host / Emcee',
+              'Full Buffet & Seating Arrangement',
+              'Corporate Photography & Highlight Video'
+            ]
+          },
+          {
+            ribbon: null,
+            tier: 'Brand Summit',
+            tagline: 'Product launches and multi-track conferences',
+            badge: 'Large Scale',
+            featured: false,
+            features: [
+              'Multi-Track AV & Live Streaming',
+              'VIP Green Rooms & Networking Lounges',
+              'Interactive Brand Display Booths',
+              'Custom Digital Registration Badging',
+              'Press & Media Coordination Desk',
+              'Dedicated Operations Director'
+            ]
+          }
+        ]
+      },
+
+      engagement: {
+        tag: 'Romantic Celebrations',
+        title: 'Engagement Ceremonies',
+        desc: 'Celebrate the beginning of your journey together with a romantic, beautifully decorated engagement ceremony. From ring exchange backdrops to candlelight and flowers, every moment is magical.',
+        budgetNote: 'Tailored to Your Budget',
+        badgeTitle: 'Sunset Engagement Decor',
+        heroImg: 'https://images.unsplash.com/photo-1522673607200-164d1b6ce486?auto=format&fit=crop&w=1000&q=85',
+        inclusions: [
+          { icon: '💐', title: 'Floral Backdrops & Arches', desc: 'Fresh flower rings, backdrop curtains, and elegant photo booths.' },
+          { icon: '🕯️', title: 'Candlelight & Fairy Lights', desc: 'Warm fairy lights, floor lanterns, and gentle romantic glow.' },
+          { icon: '💍', title: 'Ring Presentation Styling', desc: 'Decorated ring trays, flower petal carpets, and memorable entry moments.' },
+          { icon: '🥂', title: 'Welcome Drinks & Toast', desc: 'Refreshing welcome mocktails or champagne toast setup with crystal flutes.' },
+          { icon: '📸', title: 'Couple Photography', desc: 'Portraits, candid ceremony photos, and high-definition video coverage.' },
+          { icon: '🎵', title: 'Live Music & Melodies', desc: 'Soft acoustic music, violinists, or gentle romantic songs.' },
+          { icon: '💌', title: 'Personalized Welcome Signs', desc: 'Custom couple name boards and photo memory displays.' },
+          { icon: '🍽️', title: 'Family Dining Setup', desc: 'Decorated banquet tables with fresh flowers and customized menus.' }
+        ],
+        steps: [
+          { num: '1', title: 'Couple’s Vision', desc: 'We discuss your preferences for colors, traditional rituals, and theme.' },
+          { num: '2', title: 'Layout & Decor Blueprint', desc: 'We design the ring exchange stage and guest seating arrangement.' },
+          { num: '3', title: 'Setup & Lighting', desc: 'We dress up the venue with romantic flowers and warm lights.' },
+          { num: '4', title: 'Magical Exchange', desc: 'Everything is ready and timed perfectly for your ring exchange.' }
+        ],
+        gallery: [
+          'https://images.unsplash.com/photo-1522673607200-164d1b6ce486?auto=format&fit=crop&w=800&q=80',
+          'https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=800&q=80',
+          'https://images.unsplash.com/photo-1511285560929-80b456fea0bc?auto=format&fit=crop&w=800&q=80'
+        ],
+        packages: [
+          {
+            ribbon: null,
+            tier: 'Intimate Ceremony',
+            tagline: 'Cozy ring exchange with close family and friends',
+            badge: 'Intimate Setting',
+            featured: false,
+            features: [
+              'Floral Ring Exchange Backdrop',
+              'Romantic Warm Fairy Lights',
+              'Decorated Ring Platter',
+              'Welcome Name Board',
+              'Ceremony Sound System'
+            ]
+          },
+          {
+            ribbon: 'Most Popular',
+            tier: 'Signature Romance',
+            tagline: 'Romantic celebration with full styling and dinner',
+            badge: 'Full Ceremony',
+            featured: true,
+            features: [
+              'Fresh Floral Ring Arch or Frame',
+              'Candlelit Flower Aisle & Lanterns',
+              'Welcome Drinks & Mocktail Corner',
+              'Couple Photography & Portraits',
+              'Banquet Dining Seating Setup',
+              'Day Coordinator for Ritual Timings'
+            ]
+          },
+          {
+            ribbon: null,
+            tier: 'Grand Celebration',
+            tagline: 'Lavish engagement ceremony on lawn or ballroom',
+            badge: 'Grand Venue',
+            featured: false,
+            features: [
+              'Grand Floral Stage with Custom Monogram',
+              'Live Violinist or Acoustic Singer',
+              'Drone Video & Cinematic Teaser',
+              'Full Banquet & Buffet Planning',
+              'Customized Welcome Gifts for Guests',
+              'On-Site Team Managing Every Detail'
+            ]
+          }
+        ]
+      },
+
+      anniversary: {
+        tag: 'Milestone Anniversaries',
+        title: 'Anniversary Celebrations',
+        desc: 'Celebrate years of togetherness with a heartwarming celebration. Whether an intimate dinner for two or a silver jubilee gathering with all your family and friends, we make it memorable.',
+        budgetNote: 'Tailored to Your Budget',
+        badgeTitle: 'Anniversary Dinner & Stage',
+        heroImg: 'https://images.unsplash.com/photo-1519225429955-4a5598d9e6eb?auto=format&fit=crop&w=1000&q=85',
+        inclusions: [
+          { icon: '❤️', title: 'Memory Lane Photo Displays', desc: 'A lovely photo gallery showcasing your journey and travels together.' },
+          { icon: '🕯️', title: 'Candlelit Dinner Arrangements', desc: 'Floral table runners, glowing candles, and fine table settings.' },
+          { icon: '🌹', title: 'Beautiful Flower Styling', desc: 'Roses, lilies, and custom bouquets inspired by your wedding day.' },
+          { icon: '📽️', title: 'Tribute & Slide Show', desc: 'Family video messages, old photos, and special songs on a big screen.' },
+          { icon: '🎂', title: 'Custom Anniversary Cake', desc: 'Delicious multi-tier cake with custom anniversary cake topper.' },
+          { icon: '🎵', title: 'Nostalgic Music Curation', desc: 'Acoustic songs and favorite melodies from your special years.' },
+          { icon: '💌', title: 'Vow Renewal Setup', desc: 'A lovely stage setting if you wish to renew your promises.' },
+          { icon: '🍾', title: 'Drinks & Dining Management', desc: 'Dinner service, beverage coordination, and dessert arrangements.' }
+        ],
+        steps: [
+          { num: '1', title: 'Your Journey', desc: 'We learn about your milestones, favorite songs, and family memories.' },
+          { num: '2', title: 'Decor & Theme Plan', desc: 'Creating a warm, nostalgic theme that honors your love story.' },
+          { num: '3', title: 'Venue Transformation', desc: 'Decorating the space with candles, photos, and fragrant florals.' },
+          { num: '4', title: 'Heartfelt Evening', desc: 'A relaxed, beautiful celebration with your closest loved ones.' }
+        ],
+        gallery: [
+          'https://images.unsplash.com/photo-1519225429955-4a5598d9e6eb?auto=format&fit=crop&w=800&q=80',
+          'https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=800&q=80',
+          'https://images.unsplash.com/photo-1555244162-803834f70033?auto=format&fit=crop&w=800&q=80'
+        ],
+        packages: [
+          {
+            ribbon: null,
+            tier: 'Romantic Dinner',
+            tagline: 'Cozy celebration for couple and closest family',
+            badge: 'Intimate Celebration',
+            featured: false,
+            features: [
+              'Candlelit Table Setting with Florals',
+              'Memory Photo Frame Display',
+              'Special Anniversary Cake Curation',
+              'Gentle Background Music Playlist',
+              'Keepsake Photography Session'
+            ]
+          },
+          {
+            ribbon: 'Most Popular',
+            tier: 'Milestone Jubilee',
+            tagline: 'Family gathering honoring your journey together',
+            badge: 'Family Gathering',
+            featured: true,
+            features: [
+              'Memory Lane Photo & Video Wall',
+              'Decorated Stage & Floral Backdrop',
+              'Audio-Visual Setup for Family Tribute',
+              'Custom Anniversary Cake & Champagne Toast',
+              'Full Dining & Buffet Coordination',
+              'Professional Event Manager'
+            ]
+          },
+          {
+            ribbon: null,
+            tier: 'Grand Vow Renewal',
+            tagline: 'Celebrate decades of love with all your loved ones',
+            badge: 'Grand Affair',
+            featured: false,
+            features: [
+              'Romantic Stage for Vow Renewal',
+              'Grand Floral Chandeliers & Lights',
+              'Live Band or Classical Instrumentalists',
+              'High-Definition Video Memories Film',
+              'Custom Return Favors for Guests',
+              'Full Day Logistics & Hospitality Staff'
+            ]
+          }
+        ]
+      },
+
+      private: {
+        tag: 'Private Gatherings',
+        title: 'Private Parties',
+        desc: 'Exclusive, intimate, and effortlessly stylish. From rooftop cocktail parties and backyard dinners to festive celebrations, we take care of the decor, food, and music so you can just enjoy.',
+        budgetNote: 'Flexible Packages',
+        badgeTitle: 'Garden & Rooftop Party',
+        heroImg: 'https://images.unsplash.com/photo-1530103862676-de8c9debad1d?auto=format&fit=crop&w=1000&q=85',
+        inclusions: [
+          { icon: '🎨', title: 'Custom Theme & Decor', desc: 'Boho style, modern chic, tropical garden, or cozy evening theme.' },
+          { icon: '🍽️', title: 'Catering & Live Food Counters', desc: 'Delicious finger foods, live barbecue, or multi-course dining.' },
+          { icon: '🍸', title: 'Mocktail & Beverage Bar', desc: 'Custom party drinks, glass setups, and bar counter styling.' },
+          { icon: '🎵', title: 'Party Music & Sound', desc: 'High-quality sound systems, party playlists, or live musicians.' },
+          { icon: '🕯️', title: 'Festive Fairy & String Lights', desc: 'Warm bistro overhead lights, lantern pathways, and ambient candles.' },
+          { icon: '📸', title: 'Photography & Memories', desc: 'Candid event photography and fun instant photo prints.' },
+          { icon: '🚗', title: 'Staff & Guest Assistance', desc: 'Helpful staff for serving food and assisting your guests.' },
+          { icon: '✨', title: 'Relaxed Hosting', desc: 'We manage cleanup and logistics so you can spend quality time with guests.' }
+        ],
+        steps: [
+          { num: '1', title: 'Party Concept', desc: 'We talk about your guest count, preferred venue, and party mood.' },
+          { num: '2', title: 'Food & Decor Plan', desc: 'We provide easy-to-choose menus, layout options, and music ideas.' },
+          { num: '3', title: 'Fast & Neat Setup', desc: 'Our team sets up everything cleanly without bothering your routine.' },
+          { num: '4', title: 'Enjoy Your Party', desc: 'You enjoy your evening while we handle food refills and music.' }
+        ],
+        gallery: [
+          'https://images.unsplash.com/photo-1530103862676-de8c9debad1d?auto=format&fit=crop&w=800&q=80',
+          'https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?auto=format&fit=crop&w=800&q=80',
+          'https://images.unsplash.com/photo-1555244162-803834f70033?auto=format&fit=crop&w=800&q=80'
+        ],
+        packages: [
+          {
+            ribbon: null,
+            tier: 'Casual Gathering',
+            tagline: 'House parties, terrace get-togethers, and dinners',
+            badge: 'Home & Terrace',
+            featured: false,
+            features: [
+              'Cozy Ambient Fairy Lights & Lanterns',
+              'Dining or Buffet Table Dressing',
+              'Curated Party Music System',
+              'Welcome Drinks Styling',
+              'Post-Party Quick Clean Support'
+            ]
+          },
+          {
+            ribbon: 'Most Popular',
+            tier: 'Signature Soirée',
+            tagline: 'Cocktail nights, pool parties, and theme dinners',
+            badge: 'Bespoke Theme',
+            featured: true,
+            features: [
+              'Custom Theme Decor (Boho, Chic, Neon)',
+              'Mocktail / Bar Counter Setup',
+              'DJ & Party Lighting Package',
+              'Catering & Live Counter Management',
+              'Fun Photo Backdrop with Props',
+              'Dedicated Event Host'
+            ]
+          },
+          {
+            ribbon: null,
+            tier: 'Grand Celebration',
+            tagline: 'Lawn celebrations, farmhouse parties, and galas',
+            badge: 'Exclusive Venue',
+            featured: false,
+            features: [
+              'Full Venue Architectural Lighting',
+              'Live BBQ & Gourmet Buffet Counters',
+              'Live Band / DJ with Stage & Sound',
+              'Candid Event Photographer',
+              'Valet & Hospitality Assistance',
+              'Full Production Management'
+            ]
+          }
+        ]
+      }
+    };
+
+    /* ——— RENDER SERVICE DETAILS PAGE FUNCTION ——— */
+    function renderService(key) {
+      const data = serviceDatabase[key] || serviceDatabase.wedding;
+
+      // Update Page Meta
+      document.getElementById('pageTitle').textContent = `${data.title} — Evara Events`;
+      document.getElementById('bcServiceName').textContent = data.title;
+
+      // Update Hero Elements
+      document.getElementById('sdTag').textContent = `✦ ${data.tag} ✦`;
+      document.getElementById('sdTitle').textContent = data.title;
+      document.getElementById('sdDesc').textContent = data.desc;
+      document.getElementById('sdPrice').textContent = data.budgetNote;
+      document.getElementById('sdHeroImg').src = data.heroImg;
+      document.getElementById('sdHeroImg').alt = data.title;
+      document.getElementById('sdBadgeTitle').textContent = data.badgeTitle;
+
+      // Update Inclusions Grid
+      const incEl = document.getElementById('inclusionsGrid');
+      if (incEl && data.inclusions) {
+        incEl.innerHTML = data.inclusions.map(inc => `
+          <div class="inclusion-card">
+            <div class="inc-icon">${inc.icon}</div>
+            <h4>${inc.title}</h4>
+            <p>${inc.desc}</p>
+          </div>
+        `).join('');
+      }
+
+      // Update Workflow Timeline
+      const procEl = document.getElementById('processTimeline');
+      if (procEl && data.steps) {
+        procEl.innerHTML = data.steps.map(step => `
+          <div class="step-card">
+            <div class="step-num-bubble">${step.num}</div>
+            <h3>${step.title}</h3>
+            <p>${step.desc}</p>
+          </div>
+        `).join('');
+      }
+
+      // Update Gallery
+      const galEl = document.getElementById('serviceGallery');
+      if (galEl && data.gallery) {
+        galEl.innerHTML = data.gallery.map(imgUrl => `
+          <div class="gallery-grid-item">
+            <img src="${imgUrl}" alt="${data.title} showcase" loading="lazy" />
+            <div class="gallery-overlay">${data.title} · Evara Signature</div>
+          </div>
+        `).join('');
+      }
+
+      // Update Dynamic Packages Grid
+      const pkgEl = document.getElementById('packagesGrid');
+      if (pkgEl && data.packages) {
+        pkgEl.innerHTML = data.packages.map(pkg => `
+          <div class="pricing-card ${pkg.featured ? 'featured' : ''}">
+            ${pkg.ribbon ? `<div class="pricing-ribbon">${pkg.ribbon}</div>` : ''}
+            <h3 class="pricing-tier-name">${pkg.tier}</h3>
+            <p class="pricing-tagline">${pkg.tagline}</p>
+            <span class="pricing-pill-badge">${pkg.badge}</span>
+            <ul class="pricing-features">
+              ${pkg.features.map(f => `<li>${f}</li>`).join('')}
+            </ul>
+            <button type="button" class="${pkg.featured ? 'btn-gold' : 'btn-outline'} package-cta-btn" data-tier="${pkg.tier}">
+              Enquire for ${pkg.tier} →
+            </button>
+          </div>
+        `).join('');
+
+        // Attach click handlers to package buttons
+        pkgEl.querySelectorAll('.package-cta-btn').forEach(btn => {
+          btn.addEventListener('click', () => {
+            const tierName = btn.getAttribute('data-tier');
+            const msgField = document.getElementById('ifMessage');
+            const svcField = document.getElementById('ifSelectedService');
+            if (svcField) svcField.value = key;
+            if (msgField) {
+              msgField.value = `Hello Evara team, I would like to enquire about the "${tierName}" package for ${data.title}. Please share details and availability.`;
+              msgField.focus();
+            }
+            const inqSec = document.getElementById('inquirySection');
+            if (inqSec) inqSec.scrollIntoView({ behavior: 'smooth' });
+          });
+        });
+      }
+
+      // Pre-select service in form
+      const sel = document.getElementById('ifSelectedService');
+      if (sel) sel.value = key;
+
+      // Update active state on switcher tabs
+      document.querySelectorAll('.switcher-pill').forEach(btn => {
+        btn.classList.toggle('active', btn.getAttribute('data-svc') === key);
+      });
+    }
+
+    // Read query parameter on page load
+    const urlParams = new URLSearchParams(window.location.search);
+    const initialService = urlParams.get('service') || 'wedding';
+    renderService(initialService);
+
+    // Switcher tab click handler
+    document.querySelectorAll('.switcher-pill').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const key = btn.getAttribute('data-svc');
+        renderService(key);
+        // Update URL query string smoothly without reload
+        try {
+          const newUrl = `${window.location.pathname}?service=${key}`;
+          window.history.pushState({ service: key }, '', newUrl);
+        } catch (err) {
+          /* Fallback gracefully for local file:// protocol */
+        }
+        window.scrollTo({ top: 180, behavior: 'smooth' });
+      });
+    });
+
+    // In-page navigation: Intercept clicks on any service link (top dropdown, mobile drawer, footer)
+    document.querySelectorAll('a[href*="service-detail.html?service="]').forEach(link => {
+      link.addEventListener('click', (e) => {
+        const href = link.getAttribute('href');
+        const match = href.match(/service=([a-z]+)/i);
+        if (match && match[1]) {
+          const newSvc = match[1].toLowerCase();
+          if (serviceDatabase[newSvc]) {
+            e.preventDefault();
+            renderService(newSvc);
+            try {
+              window.history.pushState({ service: newSvc }, '', `?service=${newSvc}`);
+            } catch (err) {
+              /* Fallback gracefully for local file:// protocol */
+            }
+            window.scrollTo({ top: 180, behavior: 'smooth' });
+            if (typeof closeMobileDrawer === 'function') closeMobileDrawer();
+            document.querySelectorAll('.nav-dropdown-item').forEach(i => i.classList.remove('open'));
+          }
+        }
+      });
+    });
+
+    // Handle browser back/forward buttons
+    window.addEventListener('popstate', (e) => {
+      const params = new URLSearchParams(window.location.search);
+      const svc = params.get('service') || 'wedding';
+      renderService(svc);
+    });
+
+    // Desktop Navbar Dropdowns
+    document.querySelectorAll('.nav-dropdown-item').forEach(item => {
+      const btn = item.querySelector('.nav-dropdown-btn');
+      if (btn) {
+        btn.addEventListener('click', (e) => {
+          e.stopPropagation();
+          const isOpen = item.classList.contains('open');
+          document.querySelectorAll('.nav-dropdown-item').forEach(i => i.classList.remove('open'));
+          if (!isOpen) {
+            item.classList.add('open');
+            btn.setAttribute('aria-expanded', 'true');
+          } else {
+            btn.setAttribute('aria-expanded', 'false');
+          }
+        });
+      }
+    });
+
+    document.addEventListener('click', (e) => {
+      if (!e.target.closest('.nav-dropdown-item')) {
+        document.querySelectorAll('.nav-dropdown-item').forEach(item => {
+          item.classList.remove('open');
+          const btn = item.querySelector('.nav-dropdown-btn');
+          if (btn) btn.setAttribute('aria-expanded', 'false');
+        });
+      }
+    });
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        document.querySelectorAll('.nav-dropdown-item').forEach(item => {
+          item.classList.remove('open');
+          const btn = item.querySelector('.nav-dropdown-btn');
+          if (btn) btn.setAttribute('aria-expanded', 'false');
+        });
+      }
+    });
+
+    // Mobile Drawer Navigation
+    const hamburger      = document.getElementById('hamburger');
+    const mobileMenu     = document.getElementById('mobileMenu');
+    const mobileOverlay  = document.getElementById('mobileOverlay');
+    const mobileCloseBtn = document.getElementById('mobileCloseBtn');
+
+    function openMobileDrawer() {
+      if (hamburger) {
+        hamburger.classList.add('open', 'active');
+        hamburger.setAttribute('aria-expanded', 'true');
+      }
+      if (mobileMenu) mobileMenu.classList.add('open', 'active');
+      if (mobileOverlay) mobileOverlay.classList.add('open', 'active');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeMobileDrawer() {
+      if (hamburger) {
+        hamburger.classList.remove('open', 'active');
+        hamburger.setAttribute('aria-expanded', 'false');
+      }
+      if (mobileMenu) mobileMenu.classList.remove('open', 'active');
+      if (mobileOverlay) mobileOverlay.classList.remove('open', 'active');
+      document.body.style.overflow = '';
+    }
+
+    function toggleMobileDrawer() {
+      const isOpen = mobileMenu && (mobileMenu.classList.contains('open') || mobileMenu.classList.contains('active'));
+      if (isOpen) {
+        closeMobileDrawer();
+      } else {
+        openMobileDrawer();
+      }
+    }
+
+    if (hamburger) hamburger.addEventListener('click', toggleMobileDrawer);
+    if (mobileCloseBtn) mobileCloseBtn.addEventListener('click', closeMobileDrawer);
+    if (mobileOverlay) mobileOverlay.addEventListener('click', closeMobileDrawer);
+
+    document.querySelectorAll('.mobile-menu a').forEach(link => {
+      link.addEventListener('click', closeMobileDrawer);
+    });
+
+    // Inquiry Form Handler
+    const form = document.getElementById('sdInquiryForm');
+    if (form) {
+      form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const btn = form.querySelector('button[type="submit"]');
+        const orig = btn.innerHTML;
+        btn.innerHTML = 'Submitting…';
+        btn.disabled = true;
+
+        setTimeout(() => {
+          btn.innerHTML = '✓ Consultation Requested!';
+          btn.style.background = 'linear-gradient(135deg, #4CAF50, #388E3C)';
+          setTimeout(() => {
+            btn.innerHTML = orig;
+            btn.style.background = '';
+            btn.disabled = false;
+            form.reset();
+          }, 3500);
+        }, 1200);
+      });
+    }
+  </script>
+</body>
+
+</html>
